@@ -1,0 +1,41 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+	<Import Project="..\tModLoader.targets" />
+
+	<PropertyGroup>
+		
+	</PropertyGroup>
+
+	<ItemGroup>
+
+	</ItemGroup>
+
+	<ItemGroup>
+
+		<Reference Include="Daybreak">
+	    	<HintPath>..\ModAssemblies\Daybreak_v1.6.2.dll</HintPath>
+		</Reference>
+
+		<Reference Include="Fargowiltas">
+	    	<HintPath>..\ModAssemblies\Fargowiltas_v3.3.6.4.dll</HintPath>
+		</Reference>
+
+		<Reference Include="FargowiltasSouls">
+	    	<HintPath>..\ModAssemblies\FargowiltasSouls_v1.7.3.2.dll</HintPath>
+		</Reference>
+
+		<Reference Include="Daybreak">
+	    	<HintPath>..\ModAssemblies\Daybreak_v1.6.2.dll</HintPath>
+		</Reference>
+
+		<Reference Include="Luminance">
+	    	<HintPath>..\ModAssemblies\Luminance_v1.0.12.dll</HintPath>
+		</Reference>
+
+		<Reference Include="SpiritReforged">
+	    	<HintPath>..\ModAssemblies\SpiritReforged_v0.1.2.3.dll</HintPath>
+		</Reference>
+
+	</ItemGroup>
+
+</Project>

@@ -1,0 +1,23 @@
+Configs: {
+	CSEConfig: {
+		DisplayName: C S E Config
+		Headers.Enchantments: Enchantments Header
+
+		SpiritReforged: {
+			Label: Spirit Reforged
+			Tooltip: ""
+		}
+	}
+}
+
+Items: {
+	ReefHunterEnchant: {
+		DisplayName: Reef Hunter Enchant
+		Tooltip: ""
+	}
+
+	AncientMarksmansEnchant: {
+		DisplayName: Ancient Marksmans Enchant
+		Tooltip: ""
+	}
+}
