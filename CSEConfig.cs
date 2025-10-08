@@ -11,6 +11,11 @@ namespace CSE
         public override void OnChanged() => Instance = this;
 
         [Header("Enchantments")]
+
+        [ReloadRequired]
+        [DefaultValue(true)]
+        public bool SpiritMod { get; set; }
+
         [ReloadRequired]
         [DefaultValue(true)]
         public bool SpiritReforged { get; set; }

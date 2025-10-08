@@ -8,7 +8,8 @@ namespace CSE.SpiritReforged.Enchantments
     [JITWhenModsEnabled(ModCompatibility.SpiritReforged.Name)]
     public class ReefHunterEnchant : BaseEnchant
     {
-        public override bool IsLoadingEnabled(Mod mod) => CSEConfig.Instance.SpiritReforged;
+        //    public override bool IsLoadingEnabled(Mod mod) => CSEConfig.Instance.SpiritReforged;
+        public override bool IsLoadingEnabled(Mod mod) => false;
         public override void SetDefaults()
         {
             base.SetDefaults();

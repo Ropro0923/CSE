@@ -1,10 +1,15 @@
 Configs: {
 	CSEConfig: {
-		DisplayName: C S E Config
-		Headers.Enchantments: Enchantments Header
+		DisplayName: Main Config
+		Headers.Enchantments: Loaded Enchantments
 
 		SpiritReforged: {
 			Label: Spirit Reforged
+			Tooltip: ""
+		}
+
+		SpiritMod: {
+			Label: Spirit Mod
 			Tooltip: ""
 		}
 	}
@@ -17,7 +22,99 @@ Items: {
 	}
 
 	AncientMarksmansEnchant: {
-		DisplayName: Ancient Marksmans Enchant
+		DisplayName: Ancient Marksman's Enchant
 		Tooltip: ""
+	}
+
+	Adventurer: {
+		DisplayName: Adventurer
+		Tooltip: "'See what the world has to offer!'"
+	}
+
+	Gambler: {
+		DisplayName: Gambler
+		Tooltip: "'These games aren't for the faint of heart'"
+	}
+
+	Rogue: {
+		DisplayName: Rogue
+		Tooltip: "'Go kill some things'"
+	}
+
+	"Rune Wizard": {
+		DisplayName: Rune Wizard
+		Tooltip: "'You can put runes on anything!'"
+	}
+
+	EnergizerAncientAvian: {
+		DisplayName: Feathery Energizer
+		Tooltip:
+			'''
+			Formed after using 10 _
+			'Surrounded by gusts of wind'
+			'''
+	}
+
+	EnergizerAtlas: {
+		DisplayName: Fractured Energizer
+		Tooltip:
+			'''
+			Formed after using 10 _
+			'Broken, but exuding power'
+			'''
+	}
+
+	EnergizerDusking: {
+		DisplayName: Nightmarish Energizer
+		Tooltip:
+			'''
+			Formed after using 10 _
+			'Corrupted by the power of shadowflame magic'
+			'''
+	}
+
+	EnergizerInfernon: {
+		DisplayName: Infernal Energizer
+		Tooltip:
+			'''
+			Formed after using 10 _
+			'Hot to the touch'
+			'''
+	}
+
+	EnergizerMoonJellyWizard: {
+		DisplayName: Jelly Energizer
+		Tooltip:
+			'''
+			Formed after using 10 _
+			'It's fasionable too!'
+			'''
+	}
+
+	EnergizerScarabeus: {
+		DisplayName: Sandy Energizer
+		Tooltip:
+			'''
+			Formed after using 10 _
+			'An energizer covered in a scarab's shell'
+			'''
+	}
+
+	EnergizerStarplateVoyager: {
+		DisplayName: Starry Energizer
+		Tooltip:
+			'''
+			Formed after using 10 _
+			'An energizer from a mech of unknown origin'
+			'''
+	}
+
+	EnergizerVinewraithBane: {
+		DisplayName: Viney Energizer
+		Tooltip:
+			'''
+			Formed after using 10 _
+			'It beats to the rythm of the Briar'
+			'''
 	}
 }
