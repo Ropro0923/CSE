@@ -9,15 +9,9 @@ namespace CSE
         internal static CSEConfig Instance;
         public override void OnLoaded() => Instance = this;
         public override void OnChanged() => Instance = this;
-
         [Header("Enchantments")]
-
         [ReloadRequired]
         [DefaultValue(true)]
         public bool SpiritMod { get; set; }
-
-        [ReloadRequired]
-        [DefaultValue(true)]
-        public bool SpiritReforged { get; set; }
     }
 }

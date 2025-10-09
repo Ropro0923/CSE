@@ -3,13 +3,8 @@ Configs: {
 		DisplayName: Main Config
 		Headers.Enchantments: Loaded Enchantments
 
-		SpiritReforged: {
-			Label: Spirit Reforged
-			Tooltip: ""
-		}
-
 		SpiritMod: {
-			Label: Spirit Mod
+			Label: Spirit
 			Tooltip: ""
 		}
 	}
@@ -116,5 +111,10 @@ Items: {
 			Formed after using 10 _
 			'It beats to the rythm of the Briar'
 			'''
+	}
+
+	RuneWizard: {
+		DisplayName: Rune Wizard
+		Tooltip: ""
 	}
 }

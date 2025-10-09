@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using SpiritMod;
 using Terraria.ModLoader.IO;
 
-namespace CSE.SpiritMod
+namespace CSE.SpiritMod.Core.Systems
 {
     [ExtendsFromMod(ModCompatibility.SpiritMod.Name)]
     [JITWhenModsEnabled(ModCompatibility.SpiritMod.Name)]

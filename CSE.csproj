@@ -13,11 +13,15 @@
 		</Reference>
 
 		<Reference Include="Fargowiltas">
-	    	<HintPath>..\ModAssemblies\Fargowiltas_v3.3.6.4.dll</HintPath>
+	    	<HintPath>..\ModAssemblies\Fargowiltas_v3.4.dll</HintPath>
 		</Reference>
 
 		<Reference Include="FargowiltasSouls">
-	    	<HintPath>..\ModAssemblies\FargowiltasSouls_v1.7.3.2.dll</HintPath>
+	    	<HintPath>..\ModAssemblies\FargowiltasSouls_v1.8.dll</HintPath>
+		</Reference>
+
+		<Reference Include="FargoSeeds">
+	    	<HintPath>..\ModAssemblies\FargoSeeds_v1.0.dll</HintPath>
 		</Reference>
 
 		<Reference Include="Luminance">

@@ -1,4 +1,4 @@
-using Fargowiltas.Items.Summons.SwarmSummons.Energizers;
+using Fargowiltas.Content.Items.Summons.SwarmSummons.Energizers;
 
 namespace CSE.SpiritMod.Content.Items.Energizers
 {

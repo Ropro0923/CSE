@@ -7,6 +7,11 @@ namespace CSE.Core
             public const string Name = "Fargowiltas";
             public static Mod Mod => ModLoader.GetMod(Name);
         }
+        public static class FargoSeeds
+        {
+            public const string Name = "FargoSeeds";
+            public static Mod Mod => ModLoader.GetMod(Name);
+        }
         public static class FargowiltasSouls
         {
             public const string Name = "FargowiltasSouls";
