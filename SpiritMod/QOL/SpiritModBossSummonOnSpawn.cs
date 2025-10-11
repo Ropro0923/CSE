@@ -9,11 +9,11 @@ using SpiritMod.NPCs.Boss.ReachBoss;
 using SpiritMod.NPCs.Boss.Scarabeus;
 using SpiritMod.NPCs.Boss.SteamRaider;
 
-namespace CSE.SpiritMod.Content.Bosses
+namespace SOR.SpiritMod.QOL
 {
     [ExtendsFromMod(ModCompatibility.SpiritMod.Name)]
     [JITWhenModsEnabled(ModCompatibility.SpiritMod.Name)]
-    public class SpiritBossSummonOnSpawn
+    public class SpiritModBossSummonOnSpawn
     {
         public class AncientAvian : EModeNPCBehaviour
         {

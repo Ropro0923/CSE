@@ -1,25 +1,16 @@
 Configs: {
-	CSEConfig: {
+	SORConfig: {
 		DisplayName: Main Config
-		Headers.Enchantments: Loaded Enchantments
+		Headers.Enchantments: Enabled Enchantmentr
 
 		SpiritMod: {
 			Label: Spirit
-			Tooltip: ""
+			Tooltip: Toggles whether or not Spirit enchantments will be loaded
 		}
 	}
 }
 
 Items: {
-	ReefHunterEnchant: {
-		DisplayName: Reef Hunter Enchant
-		Tooltip: ""
-	}
-
-	AncientMarksmansEnchant: {
-		DisplayName: Ancient Marksman's Enchant
-		Tooltip: ""
-	}
 
 	Adventurer: {
 		DisplayName: Adventurer
@@ -36,7 +27,7 @@ Items: {
 		Tooltip: "'Go kill some things'"
 	}
 
-	"Rune Wizard": {
+	RuneWizard: {
 		DisplayName: Rune Wizard
 		Tooltip: "'You can put runes on anything!'"
 	}
@@ -111,10 +102,5 @@ Items: {
 			Formed after using 10 _
 			'It beats to the rythm of the Briar'
 			'''
-	}
-
-	RuneWizard: {
-		DisplayName: Rune Wizard
-		Tooltip: ""
 	}
 }

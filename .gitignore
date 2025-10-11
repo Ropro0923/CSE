@@ -429,3 +429,5 @@ FodyWeavers.xsd
 *.msix
 *.msm
 *.msp
+
+compile_temp

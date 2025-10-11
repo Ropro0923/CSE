@@ -1,9 +1,9 @@
-displayName = Community Souls Expansion
-author = CSE Developers Team
+displayName = Souls of Resonance
+author = Community Souls Expansion Developers Team
 version = 0.1
 homepage = https://discord.gg/frUcz2dQAy
-modReferences = FargowiltasSouls, Fargowiltas, FargoSeeds, Luminance, Daybreak
-weakReferences = SpiritMod, SpiritReforged
+modReferences = FargowiltasSouls, Fargowiltas, FargoSeeds, Luminance
+weakReferences = SpiritMod
 hideCode = false
 hideResources = false
 includePDB = false

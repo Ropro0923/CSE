@@ -1,6 +1,15 @@
-The Legacy version of Community Souls Expansion
+This mod adds Fargo's Souls compatibility with multiple mods on the Steam workshop, such as:
+Spirit,
+Vitality,
+Orchid,
+Dragon Ball,
+Bombus Apis,
+and Polarities.
 
-Source code: https://github.com/Shtuks/StarlightsSouls
+This mod also has heavy crossmodding with Community Souls Expansion and Secrets of The Souls.
+It is highly recommended to play with those two mods enabled if you have the mods they support.
+
+Source code: https://github.com/Ropro0923/SoulsofResonance
 
 Discord Server: https://discord.gg/teM27qAD35
 

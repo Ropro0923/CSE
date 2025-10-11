@@ -1,12 +1,12 @@
 using System.ComponentModel;
 using Terraria.ModLoader.Config;
 
-namespace CSE
+namespace SOR
 {
-    public class CSEConfig : ModConfig
+    public class SORConfig : ModConfig
     {
         public override ConfigScope Mode => ConfigScope.ServerSide;
-        internal static CSEConfig Instance;
+        internal static SORConfig Instance;
         public override void OnLoaded() => Instance = this;
         public override void OnChanged() => Instance = this;
         [Header("Enchantments")]

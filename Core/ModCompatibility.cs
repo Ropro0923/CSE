@@ -1,4 +1,4 @@
-namespace CSE.Core
+namespace SOR.Core
 {
     public static class ModCompatibility
     {
@@ -25,6 +25,7 @@ namespace CSE.Core
         public static class Daybreak
         {
             public const string Name = "Daybreak";
+            public static bool Loaded => ModLoader.HasMod(Name);
             public static Mod Mod => ModLoader.GetMod(Name);
         }
         public static class SpiritMod

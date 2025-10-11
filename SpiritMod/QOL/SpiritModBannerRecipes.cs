@@ -20,11 +20,11 @@ using SpiritMod.Items.Weapon.Summon;
 using SpiritMod.Items.Weapon.Summon.ElectricGun;
 using SpiritMod.Items.Weapon.Yoyo;
 
-namespace CSE.SpiritMod.Content.RecipeChanges
+namespace SOR.SpiritMod.QOL
 {
     [ExtendsFromMod(ModCompatibility.SpiritMod.Name)]
     [JITWhenModsEnabled(ModCompatibility.SpiritMod.Name)]
-    public class BannerRecipeRecipes : ModSystem
+    public class SpiritModBannerRecipes : ModSystem
     {
         public override bool IsLoadingEnabled(Mod mod) => FargoServerConfig.Instance.BannerRecipes;
         public override void AddRecipes()
