@@ -1,4 +1,5 @@
 using SpiritMod.NPCs.Town;
+using SpiritMod.NPCs.Town.Oracle;
 
 namespace SOR.SpiritMod.QOL
 {
@@ -10,8 +11,9 @@ namespace SOR.SpiritMod.QOL
         {
             ModCompatibility.Fargowiltas.Mod.Call("AddCaughtNPC", "Adventurer", ModContent.NPCType<Adventurer>(), SOR.Instance.Name);
             ModCompatibility.Fargowiltas.Mod.Call("AddCaughtNPC", "Gambler", ModContent.NPCType<Gambler>(), SOR.Instance.Name);
-            ModCompatibility.Fargowiltas.Mod.Call("AddCaughtNPC", "Rogue", ModContent.NPCType<Rogue>(), SOR.Instance.Name);
+            ModCompatibility.Fargowiltas.Mod.Call("AddCaughtNPC", "Bandit", ModContent.NPCType<Rogue>(), SOR.Instance.Name);
             ModCompatibility.Fargowiltas.Mod.Call("AddCaughtNPC", "RuneWizard", ModContent.NPCType<RuneWizard>(), SOR.Instance.Name);
+            ModCompatibility.Fargowiltas.Mod.Call("AddCaughtNPC", "Oracle", ModContent.NPCType<Oracle>(), SOR.Instance.Name);
         }
     }
 }

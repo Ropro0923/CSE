@@ -1,4 +1,3 @@
-using System.Collections.Generic;
 using SpiritMod;
 using SpiritMod.NPCs.Vulture_Matriarch;
 using Terraria.ModLoader.IO;

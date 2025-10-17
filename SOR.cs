@@ -10,6 +10,8 @@ global using SOR.Core;
 global using System;
 global using FargowiltasSouls.Content.Items.Accessories.Enchantments;
 global using FargowiltasSouls.Core.AccessoryEffectSystem;
+global using System.Collections.Generic;
+global using Fargowiltas.Content.Items.Tiles;
 using Fargowiltas.Common.Configs;
 using SOR.SpiritMod.QOL;
 
@@ -22,12 +24,13 @@ namespace SOR
 		{
 			Instance = this;
 			if (FargoServerConfig.Instance.CatchNPCs)
-            {
-                if (ModCompatibility.SpiritMod.Loaded)
+			{
+				if (ModCompatibility.SpiritMod.Loaded)
 					SpiritModCaughtNPCs.RegisterSpiritModCaughtNPCs();
-            }
+			}
+			EnchantedTreeTileEntity.SoulsMods.Add(Instance.Name);
 		}
-        public override void Unload()
+		public override void Unload()
 		{
 			Instance = null;
 		}

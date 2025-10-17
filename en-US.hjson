@@ -1,0 +1,102 @@
+Mods: {
+	SOR: {
+		Items: {
+			AstraliteEnchant: {
+				DisplayName: Astralite Enchant
+				Tooltip: ""
+			}
+
+			BismiteEnchant: {
+				DisplayName: Bismite Enchant
+				Tooltip: ""
+			}
+
+			BloodcourtEnchant: {
+				DisplayName: Bloodcourt Enchant
+				Tooltip: ""
+			}
+
+			RogueEnchant: {
+				DisplayName: Rogue Enchant
+				Tooltip: ""
+			}
+
+			EnergizerAncientAvian: {
+				DisplayName: Energizer Ancient Avian
+				Tooltip: ""
+			}
+
+			EnergizerAtlas: {
+				DisplayName: Energizer Atlas
+				Tooltip: ""
+			}
+
+			EnergizerDusking: {
+				DisplayName: Energizer Dusking
+				Tooltip: ""
+			}
+
+			EnergizerInfernon: {
+				DisplayName: Energizer Infernon
+				Tooltip: ""
+			}
+
+			EnergizerMoonJellyWizard: {
+				DisplayName: Energizer Moon Jelly Wizard
+				Tooltip: ""
+			}
+
+			EnergizerScarabeus: {
+				DisplayName: Energizer Scarabeus
+				Tooltip: ""
+			}
+
+			EnergizerStarplateVoyager: {
+				DisplayName: Energizer Starplate Voyager
+				Tooltip: ""
+			}
+
+			EnergizerVinewraithBane: {
+				DisplayName: Energizer Vinewraith Bane
+				Tooltip: ""
+			}
+
+			Adventurer: {
+				DisplayName: Adventurer
+				Tooltip: ""
+			}
+
+			Gambler: {
+				DisplayName: Gambler
+				Tooltip: ""
+			}
+
+			Bandit: {
+				DisplayName: Bandit
+				Tooltip: ""
+			}
+
+			RuneWizard: {
+				DisplayName: Rune Wizard
+				Tooltip: ""
+			}
+
+			Oracle: {
+				DisplayName: Oracle
+				Tooltip: ""
+			}
+		}
+
+		Configs: {
+			SORConfig: {
+				DisplayName: S O R Config
+				Headers.Enchantments: Enchantments Header
+
+				SpiritMod: {
+					Label: Spirit Mod
+					Tooltip: ""
+				}
+			}
+		}
+	}
+}

@@ -1,17 +1,4 @@
-Configs: {
-	SORConfig: {
-		DisplayName: Main Config
-		Headers.Enchantments: Enabled Enchantmentr
-
-		SpiritMod: {
-			Label: Spirit
-			Tooltip: Toggles whether or not Spirit enchantments will be loaded
-		}
-	}
-}
-
 Items: {
-
 	Adventurer: {
 		DisplayName: Adventurer
 		Tooltip: "'See what the world has to offer!'"
@@ -22,9 +9,14 @@ Items: {
 		Tooltip: "'These games aren't for the faint of heart'"
 	}
 
-	Rogue: {
-		DisplayName: Rogue
+	Bandit: {
+		DisplayName: Bandit
 		Tooltip: "'Go kill some things'"
+	}
+
+	Oracle: {
+		DisplayName: Oracle
+		Tooltip: "'The heavens speak of you'"
 	}
 
 	RuneWizard: {
@@ -102,5 +94,25 @@ Items: {
 			Formed after using 10 _
 			'It beats to the rythm of the Briar'
 			'''
+	}
+
+	RogueEnchant: {
+		Tooltip: ""
+		DisplayName: Rogue Enchant
+	}
+
+	BloodcourtEnchant: {
+		Tooltip: ""
+		DisplayName: Bloodcourt Enchant
+	}
+
+	BismiteEnchant: {
+		Tooltip: ""
+		DisplayName: Bismite Enchant
+	}
+
+	AstraliteEnchant: {
+		Tooltip: ""
+		DisplayName: Astralite Enchant
 	}
 }

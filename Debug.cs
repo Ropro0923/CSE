@@ -1,43 +1,30 @@
-using System.Collections.Generic;
-using SOR.SpiritMod.Enchants;
-
 namespace SOR
 {
-    public class Debug : ModPlayer
+    public class Debug
     {
         internal static string Placeholder = "SOR/Placeholder";
-        public override void OnEnterWorld()
+    }
+    public class DebugItem : GlobalItem
+    {
+        public override void ModifyTooltips(Item item, List<TooltipLine> tooltips)
         {
-            int cascadeItemType = ModContent.ItemType<CascadeEnchant>();
-            int totalValue = 0;
-            List<int> ingredients = new();
-
-            foreach (var recipe in Main.recipe)
+            TooltipLine Value = new(Mod, "Value", "Value: " + item.value.ToString())
             {
-                if (recipe == null)
-                    continue;
+                OverrideColor = Color.Green
+            };
+            tooltips.Add(Value);
 
-                if (recipe.createItem.type != cascadeItemType)
-                    continue;
-
-                if (recipe.requiredItem == null || recipe.requiredItem.Count == 0)
-                    continue;
-
-                foreach (var ingredient in recipe.requiredItem)
-                {
-                    if (ingredient != null && ingredient.type > ItemID.None)
-                        ingredients.Add(ingredient.type);
-                }
-            }
-
-            foreach (int type in ingredients)
+            TooltipLine Rare = new(Mod, "Rarity", "Rarity: " + item.rare.ToString())
             {
-                Item temp = new Item();
-                temp.SetDefaults(type);
-                totalValue += temp.value;
-            }
+                OverrideColor = Color.Cyan
+            };
+            tooltips.Add(Rare);
 
-            Main.NewText(totalValue);
+            TooltipLine Name = new(Mod, "Name", "Name: " + ItemID.Search.GetName(item.type))
+            {
+                OverrideColor = Color.Purple
+            };
+            tooltips.Add(Name);
         }
     }
 }
