@@ -1,8 +1,8 @@
-namespace SOR
+namespace ResonantSouls
 {
     public class Debug
     {
-        internal static string Placeholder = "SOR/Placeholder";
+        internal static string Placeholder = "FargowiltasSouls/Content/Items/Placeholder";
     }
     public class DebugItem : GlobalItem
     {

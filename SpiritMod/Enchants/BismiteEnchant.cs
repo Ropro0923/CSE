@@ -1,9 +1,8 @@
 using SpiritMod.Items.Accessory.Leather;
-using SpiritMod.Items.BossLoot.StarplateDrops.StarArmor;
 using SpiritMod.Items.Sets.BismiteSet;
 using SpiritMod.Items.Sets.BismiteSet.BismiteArmor;
 
-namespace SOR.SpiritMod.Enchants
+namespace ResonantSouls.SpiritMod.Enchants
 {
     [ExtendsFromMod(ModCompatibility.SpiritMod.Name)]
     [JITWhenModsEnabled(ModCompatibility.SpiritMod.Name)]

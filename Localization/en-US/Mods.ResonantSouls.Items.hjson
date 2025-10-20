@@ -1,0 +1,201 @@
+Adventurer: {
+	DisplayName: Adventurer
+	Tooltip: "'See what the world has to offer!'"
+}
+
+Gambler: {
+	DisplayName: Gambler
+	Tooltip: "'These games aren't for the faint of heart'"
+}
+
+Bandit: {
+	DisplayName: Bandit
+	Tooltip: "'Go kill some things'"
+}
+
+Oracle: {
+	DisplayName: Oracle
+	Tooltip: "'The heavens speak of you'"
+}
+
+RuneWizard: {
+	DisplayName: Rune Wizard
+	Tooltip: "'You can put runes on anything!'"
+}
+
+EnergizerAncientAvian: {
+	DisplayName: Feathery Energizer
+	Tooltip:
+		'''
+		Formed after using 10 _
+		'Surrounded by gusts of wind'
+		'''
+}
+
+EnergizerAtlas: {
+	DisplayName: Fractured Energizer
+	Tooltip:
+		'''
+		Formed after using 10 _
+		'Broken, but exuding power'
+		'''
+}
+
+EnergizerDusking: {
+	DisplayName: Nightmarish Energizer
+	Tooltip:
+		'''
+		Formed after using 10 _
+		'Corrupted by the power of shadowflame magic'
+		'''
+}
+
+EnergizerInfernon: {
+	DisplayName: Infernal Energizer
+	Tooltip:
+		'''
+		Formed after using 10 _
+		'Hot to the touch'
+		'''
+}
+
+EnergizerMoonJellyWizard: {
+	DisplayName: Jelly Energizer
+	Tooltip:
+		'''
+		Formed after using 10 _
+		'It's fasionable too!'
+		'''
+}
+
+EnergizerScarabeus: {
+	DisplayName: Sandy Energizer
+	Tooltip:
+		'''
+		Formed after using 10 _
+		'An energizer covered in a scarab's shell'
+		'''
+}
+
+EnergizerStarplateVoyager: {
+	DisplayName: Starry Energizer
+	Tooltip:
+		'''
+		Formed after using 10 _
+		'An energizer from a mech of unknown origin'
+		'''
+}
+
+EnergizerVinewraithBane: {
+	DisplayName: Viney Energizer
+	Tooltip:
+		'''
+		Formed after using 10 _
+		'It beats to the rythm of the Briar'
+		'''
+}
+
+RogueEnchant: {
+	Tooltip: ""
+	DisplayName: Rogue Enchant
+}
+
+BloodcourtEnchant: {
+	Tooltip: ""
+	DisplayName: Bloodcourt Enchant
+}
+
+BismiteEnchant: {
+	Tooltip: ""
+	DisplayName: Bismite Enchant
+}
+
+AstraliteEnchant: {
+	Tooltip: ""
+	DisplayName: Astralite Enchant
+}
+
+FrigidEnchant: {
+	DisplayName: Frigid Enchant
+	Tooltip: ""
+}
+
+BotanistEnchant: {
+	DisplayName: Botanist Enchant
+	Tooltip: ""
+}
+
+CascadeEnchant: {
+	DisplayName: Cascade Enchant
+	Tooltip: ""
+}
+
+ChitinEnchant: {
+	DisplayName: Chitin Enchant
+	Tooltip: ""
+}
+
+CryoliteEnchant: {
+	DisplayName: Cryolite Enchant
+	Tooltip: ""
+}
+
+DriftwoodEnchant: {
+	DisplayName: Driftwood Enchant
+	Tooltip: ""
+}
+
+DuskEnchant: {
+	Tooltip: ""
+	DisplayName: Dusk Enchant
+}
+
+ElderbarkEnchant: {
+	DisplayName: Elderbark Enchant
+	Tooltip: ""
+}
+
+EndlessAccursedQuiver: {
+	DisplayName: Endless Accursed Quiver
+	Tooltip: ""
+}
+
+EndlessBeetleQuiver: {
+	DisplayName: Endless Beetle Quiver
+	Tooltip: ""
+}
+
+EndlessFaerieStarPouch: {
+	DisplayName: Endless Faerie Star Pouch
+	Tooltip: ""
+}
+
+EndlessRipperPouch: {
+	DisplayName: Endless Ripper Pouch
+	Tooltip: ""
+}
+
+EndlessRubberPouch: {
+	DisplayName: Endless Rubber Pouch
+	Tooltip: ""
+}
+
+EndlessSpectrePouch: {
+	DisplayName: Endless Spectre Pouch
+	Tooltip: ""
+}
+
+EndlessWarheadBox: {
+	DisplayName: Endless Warhead Box
+	Tooltip: ""
+}
+
+SpiritRenewal: {
+	DisplayName: Spirit Renewal
+	Tooltip: ""
+}
+
+SpiritRenewalSupreme: {
+	DisplayName: Spirit Renewal Supreme
+	Tooltip: ""
+}

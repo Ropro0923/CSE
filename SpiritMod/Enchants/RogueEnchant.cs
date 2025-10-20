@@ -2,7 +2,7 @@ using SpiritMod.Items.Accessory;
 using SpiritMod.Items.Accessory.Leather;
 using SpiritMod.Items.Armor;
 
-namespace SOR.SpiritMod.Enchants
+namespace ResonantSouls.SpiritMod.Enchants
 {
     [ExtendsFromMod(ModCompatibility.SpiritMod.Name)]
     [JITWhenModsEnabled(ModCompatibility.SpiritMod.Name)]
@@ -21,15 +21,27 @@ namespace SOR.SpiritMod.Enchants
         }
         public override void AddRecipes()
         {
-            CreateRecipe()
-                .AddIngredient<RogueHood>()
-                .AddIngredient<RoguePlate>()
-                .AddIngredient<RoguePants>()
-                .AddIngredient<RogueCrest>()
-                .AddIngredient<LeatherGlove>()
-                .AddIngredient<LeatherBoots>()
-                .AddTile<EnchantedTreeSheet>()
-                .Register();
+
+            if (!ModCompatibility.SpiritReforged.Loaded)
+                CreateRecipe()
+                    .AddIngredient<RogueHood>()
+                    .AddIngredient<RoguePlate>()
+                    .AddIngredient<RoguePants>()
+                    .AddIngredient<RogueCrest>()
+                    .AddIngredient<LeatherGlove>()
+                    .AddIngredient<LeatherBoots>()
+                    .AddTile<EnchantedTreeSheet>()
+                    .Register();
+            else
+                CreateRecipe()
+                    .AddIngredient<RogueHood>()
+                    .AddIngredient<RoguePlate>()
+                    .AddIngredient<RoguePants>()
+                    .AddIngredient(ModCompatibility.SpiritReforged.Mod.Find<ModItem>("RogueCrest").Type, 1)
+                    .AddIngredient<LeatherGlove>()
+                    .AddIngredient<LeatherBoots>()
+                    .AddTile<EnchantedTreeSheet>()
+                    .Register();
         }
         public class RogueEffect : AccessoryEffect
         {

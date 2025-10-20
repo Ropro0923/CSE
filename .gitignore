@@ -431,3 +431,4 @@ FodyWeavers.xsd
 *.msp
 
 compile_temp
+*.sln

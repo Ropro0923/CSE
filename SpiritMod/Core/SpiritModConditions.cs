@@ -2,7 +2,7 @@ using SpiritMod;
 using SpiritMod.NPCs.Vulture_Matriarch;
 using Terraria.ModLoader.IO;
 
-namespace SOR.SpiritMod.Core
+namespace ResonantSouls.SpiritMod.Core
 {
     [ExtendsFromMod(ModCompatibility.SpiritMod.Name)]
     [JITWhenModsEnabled(ModCompatibility.SpiritMod.Name)]

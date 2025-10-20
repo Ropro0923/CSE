@@ -3,7 +3,7 @@ using SpiritMod.Items.BossLoot.StarplateDrops.StarArmor;
 using SpiritMod.Items.BossLoot.StarplateDrops.StarplateGlove;
 using SpiritMod.Items.Sets.SwordsMisc.AlphaBladeTree;
 
-namespace SOR.SpiritMod.Enchants
+namespace ResonantSouls.SpiritMod.Enchants
 {
     [ExtendsFromMod(ModCompatibility.SpiritMod.Name)]
     [JITWhenModsEnabled(ModCompatibility.SpiritMod.Name)]

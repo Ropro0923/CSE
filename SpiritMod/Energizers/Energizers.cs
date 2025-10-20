@@ -1,6 +1,6 @@
 using Fargowiltas.Content.Items.Summons.SwarmSummons.Energizers;
 
-namespace SOR.SpiritMod.Energizers
+namespace ResonantSouls.SpiritMod.Energizers
 {
     [ExtendsFromMod(ModCompatibility.SpiritMod.Name)]
     [JITWhenModsEnabled(ModCompatibility.SpiritMod.Name)]

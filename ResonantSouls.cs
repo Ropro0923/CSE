@@ -6,20 +6,20 @@ global using Microsoft.Xna.Framework;
 global using static System.MathF;
 global using static Microsoft.Xna.Framework.MathHelper;
 global using FargowiltasSouls.Core.Toggler;
-global using SOR.Core;
+global using ResonantSouls.Core;
 global using System;
 global using FargowiltasSouls.Content.Items.Accessories.Enchantments;
 global using FargowiltasSouls.Core.AccessoryEffectSystem;
 global using System.Collections.Generic;
 global using Fargowiltas.Content.Items.Tiles;
 using Fargowiltas.Common.Configs;
-using SOR.SpiritMod.QOL;
+using ResonantSouls.SpiritMod.QOL;
 
-namespace SOR
+namespace ResonantSouls
 {
-	public class SOR : Mod
+	public class ResonantSouls : Mod
 	{
-		internal static SOR Instance;
+		internal static ResonantSouls Instance;
 		public override void Load()
 		{
 			Instance = this;

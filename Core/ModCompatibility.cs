@@ -1,4 +1,4 @@
-namespace SOR.Core
+namespace ResonantSouls.Core
 {
     public static class ModCompatibility
     {

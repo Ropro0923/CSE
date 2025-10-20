@@ -1,11 +1,11 @@
 using Fargowiltas.Content.NPCs;
-using SOR.SpiritMod.Core;
+using ResonantSouls.SpiritMod.Core;
 using SpiritMod;
 using SpiritMod.Items.Consumable;
 using SpiritMod.Items.Placeable.Tiles;
 using SpiritMod.Items.Sets.FloatingItems.Driftwood;
 
-namespace SOR.SpiritMod.QOL
+namespace ResonantSouls.SpiritMod.QOL
 {
     [ExtendsFromMod(ModCompatibility.SpiritMod.Name)]
     [JITWhenModsEnabled(ModCompatibility.SpiritMod.Name)]

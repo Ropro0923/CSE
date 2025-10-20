@@ -3,7 +3,10 @@
 	<Import Project="..\tModLoader.targets" />
 
 	<ItemGroup>
-
+		<InternalsVisibleTo Include="CSE" />
+		<InternalsVisibleTo Include="SecretsOfTheSouls" />
+		<InternalsVisibleTo Include="ssm" />
+		<InternalsVisibleTo Include="MonstrocityMod" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -26,6 +29,10 @@
 
 		<Reference Include="SpiritMod">
 	    	<HintPath>..\ModAssemblies\SpiritMod_v1.5.0.38.dll</HintPath>
+		</Reference>
+
+		<Reference Include="SpiritReforged">
+	    	<HintPath>..\ModAssemblies\SpiritReforged_v0.1.2.3.dll</HintPath>
 		</Reference>
 
 	</ItemGroup>

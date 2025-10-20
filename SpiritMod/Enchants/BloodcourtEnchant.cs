@@ -3,7 +3,7 @@ using SpiritMod.Items.Sets.BloodcourtSet.BloodCourt;
 using SpiritMod.Items.Sets.BloodcourtSet.Headsplitter;
 using SpiritMod.Items.Sets.BloodcourtSet.Heartstrike;
 
-namespace SOR.SpiritMod.Enchants
+namespace ResonantSouls.SpiritMod.Enchants
 {
     [ExtendsFromMod(ModCompatibility.SpiritMod.Name)]
     [JITWhenModsEnabled(ModCompatibility.SpiritMod.Name)]

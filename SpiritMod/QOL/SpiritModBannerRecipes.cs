@@ -20,7 +20,7 @@ using SpiritMod.Items.Weapon.Summon;
 using SpiritMod.Items.Weapon.Summon.ElectricGun;
 using SpiritMod.Items.Weapon.Yoyo;
 
-namespace SOR.SpiritMod.QOL
+namespace ResonantSouls.SpiritMod.QOL
 {
     [ExtendsFromMod(ModCompatibility.SpiritMod.Name)]
     [JITWhenModsEnabled(ModCompatibility.SpiritMod.Name)]

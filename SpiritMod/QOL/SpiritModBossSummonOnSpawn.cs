@@ -9,7 +9,7 @@ using SpiritMod.NPCs.Boss.ReachBoss;
 using SpiritMod.NPCs.Boss.Scarabeus;
 using SpiritMod.NPCs.Boss.SteamRaider;
 
-namespace SOR.SpiritMod.QOL
+namespace ResonantSouls.SpiritMod.QOL
 {
     [ExtendsFromMod(ModCompatibility.SpiritMod.Name)]
     [JITWhenModsEnabled(ModCompatibility.SpiritMod.Name)]

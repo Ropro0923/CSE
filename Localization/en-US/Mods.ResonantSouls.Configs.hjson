@@ -1,0 +1,9 @@
+ResonantSoulsConfig: {
+	SpiritMod: {
+		Tooltip: Determines whether Spirit Classic's enchants will be loaded
+		Label: Spirit Classic
+	}
+
+	Headers.Enchantments: Loaded Enchantments
+	DisplayName: Main Configuration
+}
