@@ -21,26 +21,15 @@ namespace ResonantSouls.SpiritMod.Enchants
         }
         public override void AddRecipes()
         {
-            if (!ModCompatibility.SpiritReforged.Loaded)
-                CreateRecipe()
-                    .AddIngredient<ChitinHelmet>()
-                    .AddIngredient<ChitinChestplate>()
-                    .AddIngredient<ChitinLeggings>()
-                    .AddIngredient<RoyalKhopesh>()
-                    .AddIngredient<ScarabBow>()
-                    .AddIngredient(ModCompatibility.SpiritMod.Mod.Find<ModItem>("GildedScarab").Type, 1)
-                    .AddTile<EnchantedTreeSheet>()
-                    .Register();
-            else
-                CreateRecipe()
-                    .AddIngredient<ChitinHelmet>()
-                    .AddIngredient<ChitinChestplate>()
-                    .AddIngredient<ChitinLeggings>()
-                    .AddIngredient<RoyalKhopesh>()
-                    .AddIngredient<ScarabBow>()
-                    .AddIngredient(ModCompatibility.SpiritReforged.Mod.Find<ModItem>("GildedScarab").Type, 1)
-                    .AddTile<EnchantedTreeSheet>()
-                    .Register();
+            CreateRecipe()
+                .AddIngredient<ChitinHelmet>()
+                .AddIngredient<ChitinChestplate>()
+                .AddIngredient<ChitinLeggings>()
+                .AddIngredient<RoyalKhopesh>()
+                .AddIngredient<ScarabBow>()
+                .AddIngredient(ModCompatibility.SpiritMod.Mod.Find<ModItem>("GildedScarab").Type, 1)
+                .AddTile<EnchantedTreeSheet>()
+                .Register();
         }
         public class ChitinEffect : AccessoryEffect
         {

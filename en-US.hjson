@@ -1,8 +1,0 @@
-Mods: {
-	ResonantSouls: {
-		Projectiles: {
-			SpiritRenewalProjectile.DisplayName: Spirit Renewal Projectile
-			SpiritRenewalSupremeProjectile.DisplayName: Spirit Renewal Supreme Projectile
-		}
-	}
-}

@@ -21,27 +21,15 @@ namespace ResonantSouls.SpiritMod.Enchants
         }
         public override void AddRecipes()
         {
-
-            if (!ModCompatibility.SpiritReforged.Loaded)
-                CreateRecipe()
-                    .AddIngredient<RogueHood>()
-                    .AddIngredient<RoguePlate>()
-                    .AddIngredient<RoguePants>()
-                    .AddIngredient<RogueCrest>()
-                    .AddIngredient<LeatherGlove>()
-                    .AddIngredient<LeatherBoots>()
-                    .AddTile<EnchantedTreeSheet>()
-                    .Register();
-            else
-                CreateRecipe()
-                    .AddIngredient<RogueHood>()
-                    .AddIngredient<RoguePlate>()
-                    .AddIngredient<RoguePants>()
-                    .AddIngredient(ModCompatibility.SpiritReforged.Mod.Find<ModItem>("RogueCrest").Type, 1)
-                    .AddIngredient<LeatherGlove>()
-                    .AddIngredient<LeatherBoots>()
-                    .AddTile<EnchantedTreeSheet>()
-                    .Register();
+            CreateRecipe()
+                .AddIngredient<RogueHood>()
+                .AddIngredient<RoguePlate>()
+                .AddIngredient<RoguePants>()
+                .AddIngredient<RogueCrest>()
+                .AddIngredient<LeatherGlove>()
+                .AddIngredient<LeatherBoots>()
+                .AddTile<EnchantedTreeSheet>()
+                .Register();
         }
         public class RogueEffect : AccessoryEffect
         {

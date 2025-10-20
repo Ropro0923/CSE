@@ -22,26 +22,15 @@ namespace ResonantSouls.SpiritMod.Enchants
         }
         public override void AddRecipes()
         {
-            if (!ModCompatibility.SpiritReforged.Loaded)
-                CreateRecipe()
-                    .AddIngredient<BotanistHat>()
-                    .AddIngredient<BotanistBody>()
-                    .AddIngredient<BotanistLegs>()
-                    .AddIngredient<VitalityStone>()
-                    .AddIngredient<UnfellerOfEvergreens>()
-                    .AddIngredient<ReachFishingCatch>()
-                    .AddTile<EnchantedTreeSheet>()
-                    .Register();
-            else 
-                CreateRecipe()
-                    .AddIngredient(ModCompatibility.SpiritReforged.Mod.Find<ModItem>("BotanistHat").Type, 1)
-                    .AddIngredient(ModCompatibility.SpiritReforged.Mod.Find<ModItem>("BotanistBody").Type, 1)
-                    .AddIngredient(ModCompatibility.SpiritReforged.Mod.Find<ModItem>("BotanistLegs").Type, 1)
-                    .AddIngredient<VitalityStone>() 
-                    .AddIngredient<UnfellerOfEvergreens>()
-                    .AddIngredient<ReachFishingCatch>()
-                    .AddTile<EnchantedTreeSheet>()
-                    .Register();
+            CreateRecipe()
+                .AddIngredient<BotanistHat>()
+                .AddIngredient<BotanistBody>()
+                .AddIngredient<BotanistLegs>()
+                .AddIngredient<VitalityStone>()
+                .AddIngredient<UnfellerOfEvergreens>()
+                .AddIngredient<ReachFishingCatch>()
+                .AddTile<EnchantedTreeSheet>()
+                .Register();
         }
         public class BotanistEffect : AccessoryEffect
         {
