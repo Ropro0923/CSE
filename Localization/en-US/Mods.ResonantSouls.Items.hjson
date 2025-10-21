@@ -192,20 +192,20 @@ EndlessWarheadBox: {
 
 SpiritRenewal: {
 	DisplayName: Spirit Renewal
-	Tooltip: Turns a large radius into the Spirit
+	Tooltip: Spirits a large radius
 }
 
 SpiritRenewalSupreme: {
 	DisplayName: Spirit Renewal Supreme
-	Tooltip: Turns the whole world into the Spirit
+	Tooltip: Spirits the entire world
 }
 
 BriarRenewal: {
 	DisplayName: Briar Renewal
-	Tooltip: Turns a large radius into the Briar
+	Tooltip: Briars a large radius
 }
 
 BriarRenewalSupreme: {
 	DisplayName: Briar Renewal Supreme
-	Tooltip: Turns the whole world into the Briar
+	Tooltip: Briars the entire world
 }

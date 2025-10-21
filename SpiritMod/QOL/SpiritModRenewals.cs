@@ -77,6 +77,35 @@ namespace ResonantSouls.SpiritMod.QOL
         public SpiritRenewalProjectile() : base("SpiritRenewal", ModContent.ProjectileType<SpiritSolution>(), 1, false)
         {
         }
+        public override void OnKill(int timeLeft)
+        {
+            SoundEngine.PlaySound(SoundID.Shatter, Projectile.Center);
+
+            int radius = 150;
+            float[] speedX = [0, 0, 5, 5, 5, -5, -5, -5];
+            float[] speedY = [5, -5, 0, 5, -5, 0, 5, -5];
+
+            if (Main.netMode == NetmodeID.SinglePlayer)
+            {
+                for (int i = 0; i < 8; i++)
+                {
+                    Projectile.NewProjectile(Projectile.GetSource_FromThis(), Projectile.Center.X, Projectile.Center.Y, speedX[i], speedY[i], ModContent.ProjectileType<SpiritSolution>(), 0, 0, Main.myPlayer);
+                }
+            }
+            for (int x = -radius; x <= radius; x++)
+            {
+                for (int y = -radius; y <= radius; y++)
+                {
+                    int xPosition = (int)(x + Projectile.Center.X / 16.0f);
+                    int yPosition = (int)(y + Projectile.Center.Y / 16.0f);
+
+                    if (Math.Sqrt(x * x + y * y) <= radius + 0.5)
+                    {
+                        SpiritModRenewals.ConvertToSpirit(xPosition, yPosition);
+                    }
+                }
+            }
+        }
     }
     [ExtendsFromMod(ModCompatibility.SpiritMod.Name)]
     [JITWhenModsEnabled(ModCompatibility.SpiritMod.Name)]
@@ -85,6 +114,32 @@ namespace ResonantSouls.SpiritMod.QOL
         public override string Texture => "ResonantSouls/Assets/Textures/Content/Projectiles/Renewals/SpiritRenewalSupreme";
         public SpiritRenewalSupremeProjectile() : base("SpiritRenewalSupreme", ModContent.ProjectileType<SpiritSolution>(), 1, true)
         {
+        }
+        public override void OnKill(int timeLeft)
+        {
+            SoundEngine.PlaySound(SoundID.Shatter, Projectile.Center);
+
+            float[] speedX = [0, 0, 5, 5, 5, -5, -5, -5];
+            float[] speedY = [5, -5, 0, 5, -5, 0, 5, -5];
+
+            if (Main.netMode == NetmodeID.SinglePlayer)
+            {
+                for (int i = 0; i < 8; i++)
+                {
+                    Projectile.NewProjectile(Projectile.GetSource_FromThis(), Projectile.Center.X, Projectile.Center.Y, speedX[i], speedY[i], ModContent.ProjectileType<SpiritSolution>(), 0, 0, Main.myPlayer);
+                }
+            }
+
+            for (int x = -Main.maxTilesX; x < Main.maxTilesX; x++)
+            {
+                for (int y = -Main.maxTilesY; y < Main.maxTilesY; y++)
+                {
+                    int xPosition = (int)(x + Projectile.Center.X / 16.0f);
+                    int yPosition = (int)(y + Projectile.Center.Y / 16.0f);
+
+                    SpiritModRenewals.ConvertToSpirit(xPosition, yPosition);
+                }
+            }
         }
     }
     [ExtendsFromMod(ModCompatibility.SpiritMod.Name)]
@@ -95,6 +150,35 @@ namespace ResonantSouls.SpiritMod.QOL
         public BriarRenewalProjectile() : base("BriarRenewal", ModContent.ProjectileType<BriarSolution>(), 1, false)
         {
         }
+        public override void OnKill(int timeLeft)
+        {
+            SoundEngine.PlaySound(SoundID.Shatter, Projectile.Center);
+
+            int radius = 150;
+            float[] speedX = [0, 0, 5, 5, 5, -5, -5, -5];
+            float[] speedY = [5, -5, 0, 5, -5, 0, 5, -5];
+
+            if (Main.netMode == NetmodeID.SinglePlayer)
+            {
+                for (int i = 0; i < 8; i++)
+                {
+                    Projectile.NewProjectile(Projectile.GetSource_FromThis(), Projectile.Center.X, Projectile.Center.Y, speedX[i], speedY[i], ModContent.ProjectileType<BriarSolution>(), 0, 0, Main.myPlayer);
+                }
+            }
+            for (int x = -radius; x <= radius; x++)
+            {
+                for (int y = -radius; y <= radius; y++)
+                {
+                    int xPosition = (int)(x + Projectile.Center.X / 16.0f);
+                    int yPosition = (int)(y + Projectile.Center.Y / 16.0f);
+
+                    if (Math.Sqrt(x * x + y * y) <= radius + 0.5)
+                    {
+                        SpiritModRenewals.ConvertToBriar(xPosition, yPosition);
+                    }
+                }
+            }
+        }
     }
     [ExtendsFromMod(ModCompatibility.SpiritMod.Name)]
     [JITWhenModsEnabled(ModCompatibility.SpiritMod.Name)]
@@ -104,6 +188,115 @@ namespace ResonantSouls.SpiritMod.QOL
         public BriarRenewalSupremeProjectile() : base("BriarRenewalSupreme", ModContent.ProjectileType<BriarSolution>(), 1, true)
         {
         }
+        public override void OnKill(int timeLeft)
+        {
+            SoundEngine.PlaySound(SoundID.Shatter, Projectile.Center);
+
+            float[] speedX = [0, 0, 5, 5, 5, -5, -5, -5];
+            float[] speedY = [5, -5, 0, 5, -5, 0, 5, -5];
+
+            if (Main.netMode == NetmodeID.SinglePlayer)
+            {
+                for (int i = 0; i < 8; i++)
+                {
+                    Projectile.NewProjectile(Projectile.GetSource_FromThis(), Projectile.Center.X, Projectile.Center.Y, speedX[i], speedY[i], ModContent.ProjectileType<SpiritSolution>(), 0, 0, Main.myPlayer);
+                }
+            }
+
+            for (int x = -Main.maxTilesX; x < Main.maxTilesX; x++)
+            {
+                for (int y = -Main.maxTilesY; y < Main.maxTilesY; y++)
+                {
+                    int xPosition = (int)(x + Projectile.Center.X / 16.0f);
+                    int yPosition = (int)(y + Projectile.Center.Y / 16.0f);
+
+                    SpiritModRenewals.ConvertToBriar(xPosition, yPosition);
+                }
+            }
+        }
     }
     #endregion Projectiles
+    [ExtendsFromMod(ModCompatibility.SpiritMod.Name)]
+    [JITWhenModsEnabled(ModCompatibility.SpiritMod.Name)]
+    public class SpiritModRenewals
+    {
+        public static void ConvertToSpirit(int x, int y)
+        {
+            if (!WorldGen.InWorld(x, y, 1))
+                return;
+
+            Tile tile = Framing.GetTileSafely(x, y);
+
+            if (!tile.HasTile)
+                return;
+
+            if (WallID.Sets.Conversion.Grass[tile.WallType] && tile.WallType != (ushort)ModContent.WallType<SpiritWallNatural>())
+            {
+                tile.WallType = (ushort)ModContent.WallType<SpiritWallNatural>();
+                WorldGen.SquareWallFrame(x, y);
+                NetMessage.SendTileSquare(-1, x, y, 1);
+            }
+            if ((TileID.Sets.Conversion.Stone[tile.TileType] || TileID.Sets.Conversion.Moss[tile.TileType]) && tile.TileType != (ushort)ModContent.TileType<SpiritStone>())
+            {
+                tile.TileType = (ushort)ModContent.TileType<SpiritStone>();
+                WorldGen.SquareTileFrame(x, y);
+                NetMessage.SendTileSquare(-1, x, y, 1);
+            }
+            if (tile.TileType == TileID.Dirt)
+            {
+                tile.TileType = (ushort)ModContent.TileType<SpiritDirt>();
+                WorldGen.SquareTileFrame(x, y);
+                NetMessage.SendTileSquare(-1, x, y, 1);
+            }
+            else if (TileID.Sets.Conversion.Grass[tile.TileType] && tile.TileType != (ushort)ModContent.TileType<SpiritGrass>())
+            {
+                tile.TileType = (ushort)ModContent.TileType<SpiritGrass>();
+                WorldGen.SquareTileFrame(x, y);
+                NetMessage.SendTileSquare(-1, x, y, 1);
+            }
+            else if (TileID.Sets.Conversion.Sand[tile.TileType])
+            {
+                tile.TileType = (ushort)ModContent.TileType<Spiritsand>();
+                WorldGen.SquareTileFrame(x, y);
+                NetMessage.SendTileSquare(-1, x, y, 1);
+            }
+            else if (TileID.Sets.Conversion.Ice[tile.TileType])
+            {
+                tile.TileType = (ushort)ModContent.TileType<SpiritIce>();
+                WorldGen.SquareTileFrame(x, y);
+                NetMessage.SendTileSquare(-1, x, y, 1);
+            }
+        }
+        public static void ConvertToBriar(int x, int y)
+        {
+            if (!WorldGen.InWorld(x, y, 1))
+                return;
+
+            Tile tile = Framing.GetTileSafely(x, y);
+
+            if (!tile.HasTile)
+                return;
+
+            if (WallID.Sets.Conversion.Grass[tile.WallType] && tile.WallType != (ushort)ModContent.WallType<ReachWallNatural>())
+            {
+                tile.WallType = (ushort)ModContent.WallType<ReachWallNatural>();
+                WorldGen.SquareWallFrame(x, y);
+                NetMessage.SendTileSquare(-1, x, y, 1);
+            }
+
+            if (TileID.Sets.Conversion.Grass[tile.TileType] && tile.TileType != (ushort)ModContent.TileType<BriarGrass>())
+            {
+                tile.TileType = (ushort)ModContent.TileType<BriarGrass>();
+
+                WorldGen.SquareTileFrame(x, y);
+                NetMessage.SendTileSquare(-1, x, y, 1);
+            }
+            else if (tile.TileType == ModContent.TileType<SpiritDirt>())
+            {
+                tile.TileType = (ushort)TileID.Dirt;
+                WorldGen.SquareTileFrame(x, y);
+                NetMessage.SendTileSquare(-1, x, y, 1);
+            }
+        }
+    }
 }

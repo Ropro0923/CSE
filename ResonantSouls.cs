@@ -8,6 +8,7 @@ global using static Microsoft.Xna.Framework.MathHelper;
 global using FargowiltasSouls.Core.Toggler;
 global using ResonantSouls.Core;
 global using System;
+global using System.Linq;
 global using FargowiltasSouls.Content.Items.Accessories.Enchantments;
 global using FargowiltasSouls.Core.AccessoryEffectSystem;
 global using System.Collections.Generic;
