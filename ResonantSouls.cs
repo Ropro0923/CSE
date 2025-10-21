@@ -29,7 +29,7 @@ namespace ResonantSouls
 				if (ModCompatibility.SpiritMod.Loaded)
 					SpiritModCaughtNPCs.RegisterSpiritModCaughtNPCs();
 			}
-			EnchantedTreeTileEntity.SoulsMods.Add(Instance.Name);
+			Fargowiltas.Fargowiltas.SoulsMods.Add(Instance.Name);
 		}
 		public override void Unload()
 		{
