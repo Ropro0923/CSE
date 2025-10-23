@@ -1,8 +1,3 @@
-using SpiritMod.Items.BossLoot.StarplateDrops;
-using SpiritMod.Items.BossLoot.StarplateDrops.StarArmor;
-using SpiritMod.Items.BossLoot.StarplateDrops.StarplateGlove;
-using SpiritMod.Items.Sets.SwordsMisc.AlphaBladeTree;
-
 namespace ResonantSouls.SpiritMod.Enchants
 {
     [ExtendsFromMod(ModCompatibility.SpiritMod.Name)]
@@ -13,24 +8,11 @@ namespace ResonantSouls.SpiritMod.Enchants
         public override void SetDefaults()
         {
             base.SetDefaults();
-            Item.value = 15000 + 19000 + 17500 + 100000 + 100000 + 27500;
             Item.rare = ItemRarityID.Orange;
         }
         public override void UpdateAccessory(Player player, bool hideVisual)
         {
             player.AddEffect<AstraliteEffect>(Item);
-        }
-        public override void AddRecipes()
-        {
-            CreateRecipe()
-                .AddIngredient<StarMask>()
-                .AddIngredient<StarPlate>()
-                .AddIngredient<StarLegs>()
-                .AddIngredient<Starblade>()
-                .AddIngredient<OrionPistol>()
-                .AddIngredient<StarplateGlove>()
-                .AddTile<EnchantedTreeSheet>()
-                .Register();
         }
         public class AstraliteEffect : AccessoryEffect
         {

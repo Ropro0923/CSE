@@ -1,8 +1,3 @@
-using SpiritMod.Items.BossLoot.DuskingDrops;
-using SpiritMod.Items.BossLoot.DuskingDrops.DuskArmor;
-using SpiritMod.Items.DonatorItems;
-using SpiritMod.Items.Sets.SpearsMisc.DuskLance;
-
 namespace ResonantSouls.SpiritMod.Enchants
 {
     [ExtendsFromMod(ModCompatibility.SpiritMod.Name)]
@@ -13,24 +8,11 @@ namespace ResonantSouls.SpiritMod.Enchants
         public override void SetDefaults()
         {
             base.SetDefaults();
-            Item.value = 70000 + 50000 + 40000 + 25700 + 180000 + 80000;
             Item.rare = ItemRarityID.Pink;
         }
         public override void UpdateAccessory(Player player, bool hideVisual)
         {
             player.AddEffect<DuskEffect>(Item);
-        }
-        public override void AddRecipes()
-        {
-            CreateRecipe()
-                .AddIngredient<DuskHood>()
-                .AddIngredient<DuskLeggings>()
-                .AddIngredient<DuskPlate>()
-                .AddIngredient<BladeofYouKai>()
-                .AddIngredient<DuskLance>()
-                .AddIngredient<DuskPendant>()
-                .AddTile<EnchantedTreeSheet>()
-                .Register();
         }
         public class DuskEffect : AccessoryEffect
         {

@@ -234,59 +234,56 @@ namespace ResonantSouls.SpiritMod.QOL
         }
         public static void ConvertToSpirit(int x, int y)
         {
-            if (!WorldGen.InWorld(x, y, 1))
+            if (!WorldGen.InWorld(x, y, 1) || Math.Abs(x - y) >= 6)
                 return;
 
             Tile tile = Framing.GetTileSafely(x, y);
 
-            if (!tile.HasTile)
+            if (tile == null || (!tile.HasTile && tile.WallType != WallID.None))
                 return;
 
             if (WallID.Sets.Conversion.Grass[tile.WallType] && tile.WallType != (ushort)ModContent.WallType<SpiritWallNatural>())
             {
                 tile.WallType = (ushort)ModContent.WallType<SpiritWallNatural>();
                 WorldGen.SquareWallFrame(x, y);
-                NetMessage.SendTileSquare(-1, x, y, 1);
             }
-            if ((TileID.Sets.Conversion.Stone[tile.TileType] || TileID.Sets.Conversion.Moss[tile.TileType]) && tile.TileType != (ushort)ModContent.TileType<SpiritStone>())
-            {
-                tile.TileType = (ushort)ModContent.TileType<SpiritStone>();
-                WorldGen.SquareTileFrame(x, y);
-                NetMessage.SendTileSquare(-1, x, y, 1);
-            }
-            if (TileID.Sets.Conversion.Dirt[tile.TileType] && tile.TileType != ModContent.TileType<SpiritDirt>())
+
+            if (TileID.Sets.Conversion.Dirt[tile.TileType] && tile.TileType != (ushort)ModContent.TileType<SpiritDirt>())
             {
                 tile.TileType = (ushort)ModContent.TileType<SpiritDirt>();
                 WorldGen.SquareTileFrame(x, y);
-                NetMessage.SendTileSquare(-1, x, y, 1);
+            }
+            else if ((TileID.Sets.Conversion.Stone[tile.TileType] || TileID.Sets.Conversion.Moss[tile.TileType]) && tile.TileType != (ushort)ModContent.TileType<SpiritStone>())
+            {
+                tile.TileType = (ushort)ModContent.TileType<SpiritStone>();
+                WorldGen.SquareTileFrame(x, y);
             }
             else if (TileID.Sets.Conversion.Grass[tile.TileType] && tile.TileType != (ushort)ModContent.TileType<SpiritGrass>())
             {
                 tile.TileType = (ushort)ModContent.TileType<SpiritGrass>();
                 WorldGen.SquareTileFrame(x, y);
-                NetMessage.SendTileSquare(-1, x, y, 1);
             }
-            else if (TileID.Sets.Conversion.Sand[tile.TileType] && tile.TileType != (ushort)ModContent.TileType<Spiritsand>())
+            else if (TileID.Sets.Conversion.Sand[tile.TileType])
             {
                 tile.TileType = (ushort)ModContent.TileType<Spiritsand>();
                 WorldGen.SquareTileFrame(x, y);
-                NetMessage.SendTileSquare(-1, x, y, 1);
             }
             else if (TileID.Sets.Conversion.Ice[tile.TileType])
             {
                 tile.TileType = (ushort)ModContent.TileType<SpiritIce>();
                 WorldGen.SquareTileFrame(x, y);
-                NetMessage.SendTileSquare(-1, x, y, 1);
             }
+            else return;
+            NetMessage.SendTileSquare(-1, x, y, 1);
         }
         public static void ConvertToBriar(int x, int y)
         {
-            if (!WorldGen.InWorld(x, y, 1))
+            if (!WorldGen.InWorld(x, y, 1) || Math.Abs(x - y) >= 6)
                 return;
 
             Tile tile = Framing.GetTileSafely(x, y);
 
-            if (!tile.HasTile)
+            if (tile == null || (!tile.HasTile && tile.WallType != WallID.None))
                 return;
 
             if (WallID.Sets.Conversion.Grass[tile.WallType] && tile.WallType != (ushort)ModContent.WallType<ReachWallNatural>())
@@ -294,18 +291,17 @@ namespace ResonantSouls.SpiritMod.QOL
                 tile.WallType = (ushort)ModContent.WallType<ReachWallNatural>();
                 WorldGen.SquareWallFrame(x, y);
             }
-
             if (TileID.Sets.Conversion.Grass[tile.TileType] && tile.TileType != (ushort)ModContent.TileType<BriarGrass>())
             {
                 tile.TileType = (ushort)ModContent.TileType<BriarGrass>();
-
+                WorldGen.SquareTileFrame(x, y);
             }
-            else if (tile.TileType == ModContent.TileType<SpiritDirt>())
+            else if (TileID.Sets.Conversion.Grass[tile.WallType] && tile.WallType != TileID.Dirt)
             {
                 tile.TileType = TileID.Dirt;
+                WorldGen.SquareTileFrame(x, y);
             }
             else return;
-            WorldGen.SquareTileFrame(x, y);
             NetMessage.SendTileSquare(-1, x, y, 1);
         }
     }

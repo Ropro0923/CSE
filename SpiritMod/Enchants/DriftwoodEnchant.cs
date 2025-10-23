@@ -1,8 +1,3 @@
-using SpiritMod.Items.Sets.FloatingItems.Driftwood;
-using SpiritMod.Items.Sets.FloatingItems.Driftwood.DriftwoodArmor;
-using SpiritMod.Items.Sets.SummonsMisc.FairyWhistle;
-using SpiritMod.Items.Weapon.Summon.ButterflyStaff;
-
 namespace ResonantSouls.SpiritMod.Enchants
 {
     [ExtendsFromMod(ModCompatibility.SpiritMod.Name)]
@@ -13,24 +8,11 @@ namespace ResonantSouls.SpiritMod.Enchants
         public override void SetDefaults()
         {
             base.SetDefaults();
-            Item.value = 12500 + 50 + 100;
             Item.rare = ItemRarityID.White;
         }
         public override void UpdateAccessory(Player player, bool hideVisual)
         {
             player.AddEffect<DriftwoodEffect>(Item);
-        }
-        public override void AddRecipes()
-        {
-            CreateRecipe()
-                .AddIngredient<DriftwoodHelmet>()
-                .AddIngredient<DriftwoodChestplate>()
-                .AddIngredient<DriftwoodLeggings>()
-                .AddIngredient<ButterflyStaff>()
-                .AddIngredient<FairyWhistleItem>()
-                .AddIngredient<DriftwoodSword>()
-                .AddTile<EnchantedTreeSheet>()
-                .Register();
         }
         public class DriftwoodEffect : AccessoryEffect
         {

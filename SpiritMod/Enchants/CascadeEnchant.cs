@@ -1,8 +1,3 @@
-using SpiritMod.Items.Sets.CascadeSet.Armor;
-using SpiritMod.Items.Sets.CascadeSet.Basking_Shark;
-using SpiritMod.Items.Sets.CascadeSet.Mantaray_Hunting_Harpoon;
-using SpiritMod.Items.Sets.CascadeSet.Reef_Wrath;
-
 namespace ResonantSouls.SpiritMod.Enchants
 {
     [ExtendsFromMod(ModCompatibility.SpiritMod.Name)]
@@ -13,24 +8,11 @@ namespace ResonantSouls.SpiritMod.Enchants
         public override void SetDefaults()
         {
             base.SetDefaults();
-            Item.value = 4800 + 5600 + 4000 + 15000 + 15000 + 250000;
             Item.rare = ItemRarityID.Blue;
         }
         public override void UpdateAccessory(Player player, bool hideVisual)
         {
             player.AddEffect<CascadeEffect>(Item);
-        }
-        public override void AddRecipes()
-        {
-            CreateRecipe()
-                .AddIngredient<CascadeHelmet>()
-                .AddIngredient<CascadeChestplate>()
-                .AddIngredient<CascadeLeggings>()
-                .AddIngredient<Basking_Shark>()
-                .AddIngredient<Reef_Wrath>()
-                .AddIngredient<Mantaray_Hunting_Harpoon>()
-                .AddTile<EnchantedTreeSheet>()
-                .Register();
         }
         public class CascadeEffect : AccessoryEffect
         {

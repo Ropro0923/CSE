@@ -1,8 +1,3 @@
-using SpiritMod.Items.Accessory;
-using SpiritMod.Items.Armor.BotanistSet;
-using SpiritMod.Items.Sets.BriarDrops;
-using SpiritMod.Items.Sets.ToolsMisc.Evergreen;
-
 namespace ResonantSouls.SpiritMod.Enchants
 {
     [ExtendsFromMod(ModCompatibility.SpiritMod.Name)]
@@ -13,24 +8,11 @@ namespace ResonantSouls.SpiritMod.Enchants
         public override void SetDefaults()
         {
             base.SetDefaults();
-            Item.value = 5000 + 5000 + 5000 + 10000 + 28000 + 1000;
             Item.rare = ItemRarityID.White;
         }
         public override void UpdateAccessory(Player player, bool hideVisual)
         {
             player.AddEffect<BotanistEffect>(Item);
-        }
-        public override void AddRecipes()
-        {
-            CreateRecipe()
-                .AddIngredient<BotanistHat>()
-                .AddIngredient<BotanistBody>()
-                .AddIngredient<BotanistLegs>()
-                .AddIngredient<VitalityStone>()
-                .AddIngredient<UnfellerOfEvergreens>()
-                .AddIngredient<ReachFishingCatch>()
-                .AddTile<EnchantedTreeSheet>()
-                .Register();
         }
         public class BotanistEffect : AccessoryEffect
         {
