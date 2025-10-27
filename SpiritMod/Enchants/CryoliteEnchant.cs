@@ -1,6 +1,7 @@
 using SpiritMod.Items.Sets.CryoliteSet;
 using SpiritMod.Items.Sets.CryoliteSet.CryoliteArmor;
 using SpiritMod.Items.Sets.CryoliteSet.CryoSword;
+using SpiritMod.Items.Placeable.IceSculpture;
 
 namespace ResonantSouls.SpiritMod.Enchants
 {
@@ -24,7 +25,7 @@ namespace ResonantSouls.SpiritMod.Enchants
                 .AddIngredient<CryoliteHead>()
                 .AddIngredient<CryoliteBody>()
                 .AddIngredient<CryoliteLegs>()
-                .AddIngredient<FrigidEnchant>()
+                .AddIngredient<IceFlinxSculpture>()
                 .AddIngredient<CryoSword>()
                 .AddIngredient<CryoStaff>()
                 .AddTile<EnchantedTreeSheet>()
