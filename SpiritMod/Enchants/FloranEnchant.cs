@@ -25,7 +25,7 @@ namespace ResonantSouls.SpiritMod.Enchants
                 .AddIngredient<FHelmet>()
                 .AddIngredient<FPlate>()
                 .AddIngredient<FLegs>()
-                .AddIngredient<FloranCharm>()
+                .AddIngredient<HuskstalkStaff>()
                 .AddIngredient<FloranBludgeon>()
                 .AddIngredient<FloranReacher>()
                 .AddTile<EnchantedTreeSheet>()
