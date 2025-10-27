@@ -1,6 +1,7 @@
 using SpiritMod.Items.Accessory.Leather;
 using SpiritMod.Items.Armor.WayfarerSet;
 using SpiritMod.Items.Sets.ReefhunterSet;
+using SpiritMod.Items.Weapon.Swung.Punching_Bag;
 
 namespace ResonantSouls.SpiritMod.Enchants
 {
@@ -26,7 +27,7 @@ namespace ResonantSouls.SpiritMod.Enchants
                 .AddIngredient<WayfarerLegs>()
                 .AddIngredient<ExplorerTreads>()
                 .AddIngredient<TechBoots>()
-                .AddIngredient<PendantOfTheOcean>()
+                .AddIngredient<Punching_Bag>()
                 .AddTile<EnchantedTreeSheet>()
                 .Register();
         }
