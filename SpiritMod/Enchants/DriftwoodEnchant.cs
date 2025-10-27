@@ -1,7 +1,7 @@
 using SpiritMod.Items.Sets.FloatingItems.Driftwood;
 using SpiritMod.Items.Sets.FloatingItems.Driftwood.DriftwoodArmor;
 using SpiritMod.Items.Sets.SummonsMisc.FairyWhistle;
-using SpiritMod.Items.Weapon.Summon.ButterflyStaff;
+using SpiritMod.Items.Sets.CascadeSet.Coral_Catcher;
 
 namespace ResonantSouls.SpiritMod.Enchants
 {
@@ -26,7 +26,7 @@ namespace ResonantSouls.SpiritMod.Enchants
                 .AddIngredient<DriftwoodChestplate>()
                 .AddIngredient<DriftwoodLeggings>()
                 .AddIngredient<ButterflyStaff>()
-                .AddIngredient<FairyWhistleItem>()
+                .AddIngredient<Coral_Catcher>()
                 .AddIngredient<DriftwoodSword>()
                 .AddTile<EnchantedTreeSheet>()
                 .Register();
