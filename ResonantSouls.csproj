@@ -31,10 +31,6 @@
 	    	<HintPath>..\ModAssemblies\SpiritMod_v1.5.0.38.dll</HintPath>
 		</Reference>
 
-		<Reference Include="SpiritReforged">
-	    	<HintPath>..\ModAssemblies\SpiritReforged_v0.1.2.3.dll</HintPath>
-		</Reference>
-
 	</ItemGroup>
 
 </Project>

@@ -1,3 +1,8 @@
+using SpiritMod.Items.Armor.BotanistSet;
+using SpiritMod.Items.Sets.BriarDrops;
+using SpiritMod.Items.Sets.ClubSubclass;
+using SpiritMod.Items.Sets.ToolsMisc.Evergreen;
+
 namespace ResonantSouls.SpiritMod.Enchants
 {
     [ExtendsFromMod(ModCompatibility.SpiritMod.Name)]
@@ -13,6 +18,18 @@ namespace ResonantSouls.SpiritMod.Enchants
         public override void UpdateAccessory(Player player, bool hideVisual)
         {
             player.AddEffect<BotanistEffect>(Item);
+        }
+        public override void AddRecipes()
+        {
+            CreateRecipe()
+                .AddIngredient<BotanistHat>()
+                .AddIngredient<BotanistBody>()
+                .AddIngredient<BotanistLegs>()
+                .AddIngredient<WoodenClub>()
+                .AddIngredient<UnfellerOfEvergreens>()
+                .AddIngredient<ReachFishingCatch>()
+                .AddTile<EnchantedTreeSheet>()
+                .Register();
         }
         public class BotanistEffect : AccessoryEffect
         {

@@ -1,14 +1,14 @@
 using SpiritMod.Items.Accessory.Leather;
-using SpiritMod.Items.Sets.BismiteSet;
-using SpiritMod.Items.Sets.BismiteSet.BismiteArmor;
+using SpiritMod.Items.Armor.LeatherArmor;
+using SpiritMod.Items.DonatorItems;
 
 namespace ResonantSouls.SpiritMod.Enchants
 {
     [ExtendsFromMod(ModCompatibility.SpiritMod.Name)]
     [JITWhenModsEnabled(ModCompatibility.SpiritMod.Name)]
-    public class BismiteEnchant : BaseEnchant
+    public class MarksmanEnchant : BaseEnchant
     {
-        public override Color nameColor => new(164, 202, 74);
+        public override Color nameColor => new(134, 94, 64);
         public override void SetDefaults()
         {
             base.SetDefaults();
@@ -16,24 +16,24 @@ namespace ResonantSouls.SpiritMod.Enchants
         }
         public override void UpdateAccessory(Player player, bool hideVisual)
         {
-            player.AddEffect<BismiteEffect>(Item);
+            player.AddEffect<MarksmanEffect>(Item);
         }
         public override void AddRecipes()
         {
             CreateRecipe()
-                .AddIngredient<BismiteHelmet>()
-                .AddIngredient<BismiteChestplate>()
-                .AddIngredient<BismiteLeggings>()
-                .AddIngredient<BismiteShield>()
-                .AddIngredient<BismiteChakra>()
-                .AddIngredient<BismiteStaff>()
+                .AddIngredient<LeatherHood>()
+                .AddIngredient<LeatherPlate>()
+                .AddIngredient<LeatherLegs>()
+                .AddIngredient<DodgeBall>()
+                .AddIngredient<LeatherShield>()
+                .AddIngredient<LeatherBoots>()
                 .AddTile<EnchantedTreeSheet>()
                 .Register();
         }
-        public class BismiteEffect : AccessoryEffect
+        public class MarksmanEffect : AccessoryEffect
         {
             public override Header ToggleHeader => null;
-            public override int ToggleItemType => ModContent.ItemType<BismiteEnchant>();
+            public override int ToggleItemType => ModContent.ItemType<MarksmanEnchant>();
         }
     }
 }

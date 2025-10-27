@@ -12,6 +12,6 @@ namespace ResonantSouls
         [Header("Enchantments")]
         [ReloadRequired]
         [DefaultValue(true)]
-        public bool SpiritMod { get; set; }
+        public bool SpiritModEnchantments { get; set; }
     }
 }

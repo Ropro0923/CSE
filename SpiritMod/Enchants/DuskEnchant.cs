@@ -1,3 +1,7 @@
+using SpiritMod.Items.BossLoot.DuskingDrops;
+using SpiritMod.Items.BossLoot.DuskingDrops.DuskArmor;
+using SpiritMod.Items.DonatorItems;
+
 namespace ResonantSouls.SpiritMod.Enchants
 {
     [ExtendsFromMod(ModCompatibility.SpiritMod.Name)]
@@ -13,6 +17,18 @@ namespace ResonantSouls.SpiritMod.Enchants
         public override void UpdateAccessory(Player player, bool hideVisual)
         {
             player.AddEffect<DuskEffect>(Item);
+        }
+        public override void AddRecipes()
+        {
+            CreateRecipe()
+                .AddIngredient<DuskHood>()
+                .AddIngredient<DuskPlate>()
+                .AddIngredient<DuskLeggings>()
+                .AddIngredient<BladeofYouKai>()
+                .AddIngredient<Shadowmoor>()
+                .AddIngredient<UmbraStaff>()
+                .AddTile<EnchantedTreeSheet>()
+                .Register();
         }
         public class DuskEffect : AccessoryEffect
         {

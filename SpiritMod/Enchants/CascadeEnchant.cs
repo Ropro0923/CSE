@@ -1,3 +1,8 @@
+using SpiritMod.Items.Sets.CascadeSet.Armor;
+using SpiritMod.Items.Sets.CascadeSet.Basking_Shark;
+using SpiritMod.Items.Sets.CascadeSet.BubbleMine;
+using SpiritMod.Items.Sets.CascadeSet.Reef_Wrath;
+
 namespace ResonantSouls.SpiritMod.Enchants
 {
     [ExtendsFromMod(ModCompatibility.SpiritMod.Name)]
@@ -13,6 +18,18 @@ namespace ResonantSouls.SpiritMod.Enchants
         public override void UpdateAccessory(Player player, bool hideVisual)
         {
             player.AddEffect<CascadeEffect>(Item);
+        }
+        public override void AddRecipes()
+        {
+            CreateRecipe()
+                .AddIngredient<CascadeHelmet>()
+                .AddIngredient<CascadeChestplate>()
+                .AddIngredient<CascadeLeggings>()
+                .AddIngredient<Basking_Shark>()
+                .AddIngredient<Reef_Wrath>()
+                .AddIngredient<BubbleMine>(140)
+                .AddTile<EnchantedTreeSheet>()
+                .Register();
         }
         public class CascadeEffect : AccessoryEffect
         {

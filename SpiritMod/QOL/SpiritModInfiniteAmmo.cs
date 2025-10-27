@@ -1,3 +1,4 @@
+/*
 using Fargowiltas.Content.Items.Ammos;
 using SpiritMod.Items.Ammo.Arrow;
 using SpiritMod.Items.Ammo.Bullet;
@@ -55,3 +56,4 @@ namespace ResonantSouls.SpiritMod.QOL
         public override int AmmunitionItem => ModContent.ItemType<Warhead>();
     }
 }
+*/

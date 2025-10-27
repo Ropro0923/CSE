@@ -18,8 +18,8 @@ Oracle: {
 	Tooltip: "'The heavens speak of you'"
 }
 
-RuneWizard: {
-	DisplayName: Rune Wizard
+Enchanter: {
+	DisplayName: Enchanter
 	Tooltip: "'You can put runes on anything!'"
 }
 
@@ -208,4 +208,64 @@ BriarRenewal: {
 BriarRenewalSupreme: {
 	DisplayName: Briar Renewal Supreme
 	Tooltip: Briars the entire world
+}
+
+GraniteEnchant: {
+	Tooltip: ""
+	DisplayName: Granite Enchant
+}
+
+MarksmanEnchant: {
+	DisplayName: Marksman Enchant
+	Tooltip: ""
+}
+
+FloranEnchant: {
+	DisplayName: Floran Enchant
+	Tooltip: ""
+}
+
+PainMongerEnchant: {
+	DisplayName: Pain Monger Enchant
+	Tooltip: ""
+}
+
+PrimalstoneEnchant: {
+	DisplayName: Primalstone Enchant
+	Tooltip: ""
+}
+
+RunicEnchant: {
+	DisplayName: Runic Enchant
+	Tooltip: ""
+}
+
+SeraphEnchant: {
+	DisplayName: Seraph Enchant
+	Tooltip: ""
+}
+
+SlagTyrantEnchant: {
+	DisplayName: Slag Tyrant Enchant
+	Tooltip: ""
+}
+
+SpiritEnchant: {
+	DisplayName: Spirit Enchant
+	Tooltip: ""
+}
+
+StreamSurferEnchant: {
+	DisplayName: Stream Surfer Enchant
+	Tooltip: ""
+}
+
+SunflowerEnchant: {
+	DisplayName: Sunflower Enchant
+	Tooltip: ""
+}
+
+WayfarerEnchant: {
+	DisplayName: Wayfarer Enchant
+	Tooltip: ""
 }

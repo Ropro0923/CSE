@@ -1,3 +1,4 @@
+/*
 using Fargowiltas.Content.Items.Renewals;
 using Fargowiltas.Content.Projectiles;
 using SpiritMod.Projectiles.Solutions;
@@ -199,7 +200,7 @@ namespace ResonantSouls.SpiritMod.QOL
             {
                 for (int i = 0; i < 8; i++)
                 {
-                    Projectile.NewProjectile(Projectile.GetSource_FromThis(), Projectile.Center.X, Projectile.Center.Y, speedX[i], speedY[i], ModContent.ProjectileType<SpiritSolution>(), 0, 0, Main.myPlayer);
+                    Projectile.NewProjectile(Projectile.GetSource_FromThis(), Projectile.Center.X, Projectile.Center.Y, speedX[i], speedY[i], ModContent.ProjectileType<BriarSolution>(), 0, 0, Main.myPlayer);
                 }
             }
 
@@ -234,7 +235,7 @@ namespace ResonantSouls.SpiritMod.QOL
         }
         public static void ConvertToSpirit(int x, int y)
         {
-            if (!WorldGen.InWorld(x, y, 1) || Math.Abs(x - y) >= 6)
+            if (!WorldGen.InWorld(x, y, 1))
                 return;
 
             Tile tile = Framing.GetTileSafely(x, y);
@@ -278,7 +279,7 @@ namespace ResonantSouls.SpiritMod.QOL
         }
         public static void ConvertToBriar(int x, int y)
         {
-            if (!WorldGen.InWorld(x, y, 1) || Math.Abs(x - y) >= 6)
+            if (!WorldGen.InWorld(x, y, 1))
                 return;
 
             Tile tile = Framing.GetTileSafely(x, y);
@@ -291,12 +292,18 @@ namespace ResonantSouls.SpiritMod.QOL
                 tile.WallType = (ushort)ModContent.WallType<ReachWallNatural>();
                 WorldGen.SquareWallFrame(x, y);
             }
+
+            if (tile.TileType == (ushort)ModContent.TileType<SpiritDirt>())
+            {
+                tile.TileType = TileID.Dirt;
+                WorldGen.SquareTileFrame(x, y);
+            }
             if (TileID.Sets.Conversion.Grass[tile.TileType] && tile.TileType != (ushort)ModContent.TileType<BriarGrass>())
             {
                 tile.TileType = (ushort)ModContent.TileType<BriarGrass>();
                 WorldGen.SquareTileFrame(x, y);
             }
-            else if (TileID.Sets.Conversion.Grass[tile.WallType] && tile.WallType != TileID.Dirt)
+            else if (TileID.Sets.Conversion.Dirt[tile.WallType] && tile.WallType != TileID.Dirt)
             {
                 tile.TileType = TileID.Dirt;
                 WorldGen.SquareTileFrame(x, y);
@@ -306,3 +313,4 @@ namespace ResonantSouls.SpiritMod.QOL
         }
     }
 }
+*/

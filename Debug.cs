@@ -1,6 +1,6 @@
 namespace ResonantSouls
 {
-    public class Debug
+    public class Debug : ModSystem
     {
         internal static string Placeholder = "FargowiltasSouls/Content/Items/Placeholder";
     }

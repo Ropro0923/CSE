@@ -21,7 +21,6 @@ namespace ResonantSouls.SpiritMod.Energizers
     [JITWhenModsEnabled(ModCompatibility.SpiritMod.Name)]
     public class EnergizerAncientAvian : EnergizerEye
     {
-        public override string Texture => Debug.Placeholder;
     }
     [ExtendsFromMod(ModCompatibility.SpiritMod.Name)]
     [JITWhenModsEnabled(ModCompatibility.SpiritMod.Name)]
@@ -37,7 +36,6 @@ namespace ResonantSouls.SpiritMod.Energizers
     [JITWhenModsEnabled(ModCompatibility.SpiritMod.Name)]
     public class EnergizerDusking : EnergizerEye
     {
-        public override string Texture => Debug.Placeholder;
     }
     [ExtendsFromMod(ModCompatibility.SpiritMod.Name)]
     [JITWhenModsEnabled(ModCompatibility.SpiritMod.Name)]

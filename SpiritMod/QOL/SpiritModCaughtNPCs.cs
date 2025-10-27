@@ -12,7 +12,7 @@ namespace ResonantSouls.SpiritMod.QOL
             ModCompatibility.Fargowiltas.Mod.Call("AddCaughtNPC", "Adventurer", ModContent.NPCType<Adventurer>(), ResonantSouls.Instance.Name);
             ModCompatibility.Fargowiltas.Mod.Call("AddCaughtNPC", "Gambler", ModContent.NPCType<Gambler>(), ResonantSouls.Instance.Name);
             ModCompatibility.Fargowiltas.Mod.Call("AddCaughtNPC", "Bandit", ModContent.NPCType<Rogue>(), ResonantSouls.Instance.Name);
-            ModCompatibility.Fargowiltas.Mod.Call("AddCaughtNPC", "RuneWizard", ModContent.NPCType<RuneWizard>(), ResonantSouls.Instance.Name);
+            ModCompatibility.Fargowiltas.Mod.Call("AddCaughtNPC", "Enchanter", ModContent.NPCType<RuneWizard>(), ResonantSouls.Instance.Name);
             ModCompatibility.Fargowiltas.Mod.Call("AddCaughtNPC", "Oracle", ModContent.NPCType<Oracle>(), ResonantSouls.Instance.Name);
         }
     }

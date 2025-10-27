@@ -1,3 +1,7 @@
+using SpiritMod.Items.Sets.CryoliteSet;
+using SpiritMod.Items.Sets.CryoliteSet.CryoliteArmor;
+using SpiritMod.Items.Sets.CryoliteSet.CryoSword;
+
 namespace ResonantSouls.SpiritMod.Enchants
 {
     [ExtendsFromMod(ModCompatibility.SpiritMod.Name)]
@@ -13,6 +17,18 @@ namespace ResonantSouls.SpiritMod.Enchants
         public override void UpdateAccessory(Player player, bool hideVisual)
         {
             player.AddEffect<CryoliteEffect>(Item);
+        }
+        public override void AddRecipes()
+        {
+            CreateRecipe()
+                .AddIngredient<CryoliteHead>()
+                .AddIngredient<CryoliteBody>()
+                .AddIngredient<CryoliteLegs>()
+                .AddIngredient<FrigidEnchant>()
+                .AddIngredient<CryoSword>()
+                .AddIngredient<CryoStaff>()
+                .AddTile<EnchantedTreeSheet>()
+                .Register();
         }
         public class CryoliteEffect : AccessoryEffect
         {

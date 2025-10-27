@@ -1,3 +1,8 @@
+using SpiritMod.Items.Accessory;
+using SpiritMod.Items.Accessory.Leather;
+using SpiritMod.Items.Armor;
+using SpiritMod.Items.Weapon.Thrown;
+
 namespace ResonantSouls.SpiritMod.Enchants
 {
     [ExtendsFromMod(ModCompatibility.SpiritMod.Name)]
@@ -13,6 +18,18 @@ namespace ResonantSouls.SpiritMod.Enchants
         public override void UpdateAccessory(Player player, bool hideVisual)
         {
             player.AddEffect<RogueEffect>(Item);
+        }
+        public override void AddRecipes()
+        {
+            CreateRecipe()
+                .AddIngredient<RogueHood>()
+                .AddIngredient<RoguePlate>()
+                .AddIngredient<RoguePants>()
+                .AddIngredient<RogueCrest>()
+                .AddIngredient<LeatherGlove>()
+                .AddIngredient<Kunai_Throwing>(250)
+                .AddTile<EnchantedTreeSheet>()
+                .Register();
         }
         public class RogueEffect : AccessoryEffect
         {
