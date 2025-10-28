@@ -309,3 +309,68 @@ EtherealitySoul: {
 	DisplayName: Soul of Ethereality
 	Tooltip: ""
 }
+
+AncientTentacle: {
+	DisplayName: Ancient Tentacle
+	Tooltip: Summons R'lyehian
+}
+
+AvianCrown: {
+	DisplayName: Avian Crown
+	Tooltip: Summons Ancient Avian
+}
+
+BrightFeather: {
+	DisplayName: Bright Feather
+	Tooltip: Summons Valkyrie
+}
+
+BrokenHalo: {
+	DisplayName: Broken Halo
+	Tooltip: Summons Fallen Angel
+}
+
+CloakedHat: {
+	DisplayName: Cloaked Hat
+	Tooltip: Summons Darkfeather Mage
+}
+
+GladeLeaves: {
+	DisplayName: Glade Leaves
+	Tooltip: Summons Gladewraith
+}
+
+FrostLantern: {
+	DisplayName: Frost Lantern
+	Tooltip: Summons Snow Monger
+}
+
+GladiatorsCloak: {
+	DisplayName: Gladiator's Cloak
+	Tooltip: Summons Gladiator's Spirit
+}
+
+HauntedPage: {
+	DisplayName: Haunted Page
+	Tooltip: Summons Haunted Tome
+}
+
+MarbleEye: {
+	DisplayName: Marble Eye
+	Tooltip: Summons Beholder
+}
+
+MechanicalOrb: {
+	DisplayName: Mechanical Orb
+	Tooltip: Summons Mechromancer
+}
+
+OccultistsRobe: {
+	DisplayName: Occultist's Robe
+	Tooltip: Summons Occultist
+}
+
+SporePouch: {
+	DisplayName: Spore Pouch
+	Tooltip: Summons Snaptrapper
+}
