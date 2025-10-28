@@ -1,4 +1,4 @@
-using SpiritMod.Items.Sets.RlyehianDrops;
+using SpiritMod.Items.Sets.ReefhunterSet;
 using SpiritMod.Items.Sets.TideDrops;
 using SpiritMod.Items.Sets.TideDrops.StreamSurfer;
 
@@ -25,7 +25,7 @@ namespace ResonantSouls.SpiritMod.Enchants
                 .AddIngredient<StreamSurferChestplate>()
                 .AddIngredient<StreamSurferLeggings>()
                 .AddIngredient<CoconutGun>()
-                .AddIngredient<TomeOfRylien>()
+                .AddIngredient<PendantOfTheOcean>()
                 .AddIngredient<Minifish>()
                 .AddTile<EnchantedTreeSheet>()
                 .Register();
