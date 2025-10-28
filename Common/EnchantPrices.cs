@@ -1,3 +1,6 @@
+using FargowiltasSouls.Content.Items;
+using FargowiltasSouls.Content.Items.Accessories.Forces;
+
 namespace ResonantSouls.Common
 {
     public class EnchantPricesSystem : ModSystem
@@ -8,12 +11,20 @@ namespace ResonantSouls.Common
             {
                 if (item is BaseEnchant && ResonantSouls.Instance.TryFind($"{item.Name}", out ModItem enchant))
                 {
-                    EnchantPrices.Enchants.Add(enchant.Type);
+                    SoulsPrices.Enchants.Add(enchant.Type);
+                }
+                else if (item is BaseForce && ResonantSouls.Instance.TryFind($"{item.Name}", out ModItem force))
+                {
+                    SoulsPrices.Enchants.Add(force.Type);
+                }
+                else if (item is SoulsItem && ResonantSouls.Instance.TryFind($"{item.Name}", out ModItem SoulsItem))
+                {
+                    SoulsPrices.Enchants.Add(SoulsItem.Type);
                 }
             }
         }
     }
-    public class EnchantPrices : GlobalItem
+    public class SoulsPrices : GlobalItem
     {
         internal static List<int> Enchants = [];
         public override void SetDefaults(Item item)

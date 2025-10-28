@@ -1,9 +1,24 @@
-ResonantSoulsConfig: {
-	SpiritModEnchantments: {
+ResonantSoulsSpiritConfig: {
+	DisplayName: Spirit Classic
+	Headers.LoadedContent: Loaded Content
+
+	Enchantments: {
 		Tooltip: Determines whether Spirit Classic's enchants will be loaded
-		Label: Spirit Classic
+		Label: Enchantments
 	}
 
-	Headers.Enchantments: Loaded Enchantments
-	DisplayName: Main Configuration
+	EternityModeAccessories: {
+		Tooltip: Determines whether Spirit Classic's Eternity Mode Accessories will be loaded
+		Label: Eternity Mode Accessories
+	}
+
+	Energizers: {
+		Tooltip: Determines whether Spirit Classic's energizers and energized weapons will be loaded
+		Label: Energizers
+	}
+
+	QualityOfLife: {
+		Tooltip: Determines whether Spirit Classic's quality of life features will be loaded
+		Label: Quality of Life
+	}
 }

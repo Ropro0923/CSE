@@ -1,7 +1,9 @@
 using SpiritMod.Items.Sets.FloatingItems.Driftwood;
 using SpiritMod.Items.Sets.FloatingItems.Driftwood.DriftwoodArmor;
-using SpiritMod.Items.Sets.SummonsMisc.FairyWhistle;
 using SpiritMod.Items.Sets.CascadeSet.Coral_Catcher;
+using SpiritMod.Items.Weapon.Summon.ButterflyStaff;
+using FargowiltasSouls.Core.Toggler.Content;
+using ResonantSouls.SpiritMod.Core;
 
 namespace ResonantSouls.SpiritMod.Enchants
 {
@@ -9,10 +11,13 @@ namespace ResonantSouls.SpiritMod.Enchants
     [JITWhenModsEnabled(ModCompatibility.SpiritMod.Name)]
     public class DriftwoodEnchant : BaseEnchant
     {
+        public override bool IsLoadingEnabled(Mod mod) => ResonantSoulsSpiritConfig.Instance.Enchantments;
         public override Color nameColor => new(186, 154, 114);
         public override void SetDefaults()
         {
             base.SetDefaults();
+            Item.width = 40;
+            Item.height = 40;
             Item.rare = ItemRarityID.White;
         }
         public override void UpdateAccessory(Player player, bool hideVisual)
@@ -31,10 +36,13 @@ namespace ResonantSouls.SpiritMod.Enchants
                 .AddTile<EnchantedTreeSheet>()
                 .Register();
         }
-        public class DriftwoodEffect : AccessoryEffect
-        {
-            public override Header ToggleHeader => null;
-            public override int ToggleItemType => ModContent.ItemType<DriftwoodEnchant>();
-        }
+    }
+    [ExtendsFromMod(ModCompatibility.SpiritMod.Name)]
+    [JITWhenModsEnabled(ModCompatibility.SpiritMod.Name)]
+    public class DriftwoodEffect : AccessoryEffect
+    {
+        public override bool IsLoadingEnabled(Mod mod) => ResonantSoulsSpiritConfig.Instance.Enchantments;
+        public override Header ToggleHeader => Header.GetHeader<TrawlerHeader>();
+        public override int ToggleItemType => ModContent.ItemType<DriftwoodEnchant>();
     }
 }

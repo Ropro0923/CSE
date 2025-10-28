@@ -1,6 +1,8 @@
+using ResonantSouls.SpiritMod.Forces;
 using SpiritMod.Items.Sets.SeraphSet;
 using SpiritMod.Items.Sets.SeraphSet.SeraphArmor;
 using SpiritMod.Items.Weapon.Summon;
+using ResonantSouls.SpiritMod.Core;
 
 namespace ResonantSouls.SpiritMod.Enchants
 {
@@ -8,10 +10,13 @@ namespace ResonantSouls.SpiritMod.Enchants
     [JITWhenModsEnabled(ModCompatibility.SpiritMod.Name)]
     public class SeraphEnchant : BaseEnchant
     {
+        public override bool IsLoadingEnabled(Mod mod) => ResonantSoulsSpiritConfig.Instance.Enchantments;
         public override Color nameColor => new(165, 189, 221);
         public override void SetDefaults()
         {
             base.SetDefaults();
+            Item.width = 36;
+            Item.height = 40;
             Item.rare = ItemRarityID.LightRed;
         }
         public override void UpdateAccessory(Player player, bool hideVisual)
@@ -30,10 +35,13 @@ namespace ResonantSouls.SpiritMod.Enchants
                 .AddTile<EnchantedTreeSheet>()
                 .Register();
         }
-        public class SeraphEffect : AccessoryEffect
-        {
-            public override Header ToggleHeader => null;
-            public override int ToggleItemType => ModContent.ItemType<SeraphEnchant>();
-        }
+    }
+    [ExtendsFromMod(ModCompatibility.SpiritMod.Name)]
+    [JITWhenModsEnabled(ModCompatibility.SpiritMod.Name)]
+    public class SeraphEffect : AccessoryEffect
+    {
+        public override bool IsLoadingEnabled(Mod mod) => ResonantSoulsSpiritConfig.Instance.Enchantments;
+        public override Header ToggleHeader => Header.GetHeader<ManaHeader>();
+        public override int ToggleItemType => ModContent.ItemType<SeraphEnchant>();
     }
 }

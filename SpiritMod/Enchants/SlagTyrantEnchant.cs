@@ -1,6 +1,8 @@
+using ResonantSouls.SpiritMod.Forces;
 using SpiritMod.Items.Sets.ClubSubclass;
 using SpiritMod.Items.Sets.SlagSet;
 using SpiritMod.Items.Sets.SlagSet.FieryArmor;
+using ResonantSouls.SpiritMod.Core;
 
 namespace ResonantSouls.SpiritMod.Enchants
 {
@@ -8,10 +10,13 @@ namespace ResonantSouls.SpiritMod.Enchants
     [JITWhenModsEnabled(ModCompatibility.SpiritMod.Name)]
     public class SlagTyrantEnchant : BaseEnchant
     {
+        public override bool IsLoadingEnabled(Mod mod) => ResonantSoulsSpiritConfig.Instance.Enchantments;
         public override Color nameColor => new(251, 102, 17);
         public override void SetDefaults()
         {
             base.SetDefaults();
+            Item.width = 36;
+            Item.height = 40;
             Item.rare = ItemRarityID.Orange;
         }
         public override void UpdateAccessory(Player player, bool hideVisual)
@@ -30,10 +35,13 @@ namespace ResonantSouls.SpiritMod.Enchants
                 .AddTile<EnchantedTreeSheet>()
                 .Register();
         }
-        public class SlagTyrantEffect : AccessoryEffect
-        {
-            public override Header ToggleHeader => null;
-            public override int ToggleItemType => ModContent.ItemType<SlagTyrantEnchant>();
-        }
+    }
+    [ExtendsFromMod(ModCompatibility.SpiritMod.Name)]
+    [JITWhenModsEnabled(ModCompatibility.SpiritMod.Name)]
+    public class SlagTyrantEffect : AccessoryEffect
+    {
+        public override bool IsLoadingEnabled(Mod mod) => ResonantSoulsSpiritConfig.Instance.Enchantments;
+        public override Header ToggleHeader => Header.GetHeader<ManaHeader>();
+        public override int ToggleItemType => ModContent.ItemType<SlagTyrantEnchant>();
     }
 }

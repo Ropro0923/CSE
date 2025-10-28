@@ -1,7 +1,9 @@
+using ResonantSouls.SpiritMod.Forces;
 using SpiritMod.Items.ByBiome.Briar.Consumables;
 using SpiritMod.Items.Sets.GladeWraithDrops;
 using SpiritMod.Items.Sets.HuskstalkSet;
 using SpiritMod.Items.Sets.HuskstalkSet.ElderbarkArmor;
+using ResonantSouls.SpiritMod.Core;
 
 namespace ResonantSouls.SpiritMod.Enchants
 {
@@ -9,10 +11,13 @@ namespace ResonantSouls.SpiritMod.Enchants
     [JITWhenModsEnabled(ModCompatibility.SpiritMod.Name)]
     public class ElderbarkEnchant : BaseEnchant
     {
+        public override bool IsLoadingEnabled(Mod mod) => ResonantSoulsSpiritConfig.Instance.Enchantments;
         public override Color nameColor => new(115, 141, 54);
         public override void SetDefaults()
         {
             base.SetDefaults();
+            Item.width = 44;
+            Item.height = 32;
             Item.rare = ItemRarityID.White;
         }
         public override void UpdateAccessory(Player player, bool hideVisual)
@@ -31,10 +36,13 @@ namespace ResonantSouls.SpiritMod.Enchants
                 .AddTile<EnchantedTreeSheet>()
                 .Register();
         }
-        public class ElderbarkEffect : AccessoryEffect
-        {
-            public override Header ToggleHeader => null;
-            public override int ToggleItemType => ModContent.ItemType<ElderbarkEnchant>();
-        }
+    }
+    [ExtendsFromMod(ModCompatibility.SpiritMod.Name)]
+    [JITWhenModsEnabled(ModCompatibility.SpiritMod.Name)]
+    public class ElderbarkEffect : AccessoryEffect
+    {
+        public override bool IsLoadingEnabled(Mod mod) => ResonantSoulsSpiritConfig.Instance.Enchantments;
+        public override Header ToggleHeader => Header.GetHeader<AdventuresHeader>();
+        public override int ToggleItemType => ModContent.ItemType<ElderbarkEnchant>();
     }
 }

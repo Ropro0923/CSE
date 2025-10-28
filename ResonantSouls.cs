@@ -15,6 +15,7 @@ global using System.Collections.Generic;
 global using Fargowiltas.Content.Items.Tiles;
 using Fargowiltas.Common.Configs;
 using ResonantSouls.SpiritMod.QOL;
+using ResonantSouls.SpiritMod.Core;
 
 namespace ResonantSouls
 {
@@ -26,7 +27,7 @@ namespace ResonantSouls
 			Instance = this;
 			if (FargoServerConfig.Instance.CatchNPCs)
 			{
-				if (ModCompatibility.SpiritMod.Loaded)
+				if (ModCompatibility.SpiritMod.Loaded && ResonantSoulsSpiritConfig.Instance.QualityOfLife)
 					SpiritModCaughtNPCs.RegisterSpiritModCaughtNPCs();
 			}
 			Fargowiltas.Fargowiltas.SoulsMods.Add(Instance.Name);

@@ -1,5 +1,7 @@
+using ResonantSouls.SpiritMod.Forces;
 using SpiritMod.Items.BossLoot.InfernonDrops;
 using SpiritMod.Items.BossLoot.InfernonDrops.InfernonArmor;
+using ResonantSouls.SpiritMod.Core;
 
 namespace ResonantSouls.SpiritMod.Enchants
 {
@@ -7,10 +9,13 @@ namespace ResonantSouls.SpiritMod.Enchants
     [JITWhenModsEnabled(ModCompatibility.SpiritMod.Name)]
     public class PainMongerEnchant : BaseEnchant
     {
+        public override bool IsLoadingEnabled(Mod mod) => ResonantSoulsSpiritConfig.Instance.Enchantments;
         public override Color nameColor => new(234, 93, 15);
         public override void SetDefaults()
         {
             base.SetDefaults();
+            Item.width = 40;
+            Item.height = 42;
             Item.rare = ItemRarityID.Pink;
         }
         public override void UpdateAccessory(Player player, bool hideVisual)
@@ -28,11 +33,14 @@ namespace ResonantSouls.SpiritMod.Enchants
                 .AddIngredient<SevenSins>()
                 .AddTile<EnchantedTreeSheet>()
                 .Register();
-        }   
-        public class PainMongerEffect : AccessoryEffect
-        {
-            public override Header ToggleHeader => null;
-            public override int ToggleItemType => ModContent.ItemType<PainMongerEnchant>();
         }
+    }
+    [ExtendsFromMod(ModCompatibility.SpiritMod.Name)]
+    [JITWhenModsEnabled(ModCompatibility.SpiritMod.Name)]
+    public class PainMongerEffect : AccessoryEffect
+    {
+        public override bool IsLoadingEnabled(Mod mod) => ResonantSoulsSpiritConfig.Instance.Enchantments;
+        public override Header ToggleHeader => Header.GetHeader<FoesHeader>();
+        public override int ToggleItemType => ModContent.ItemType<PainMongerEnchant>();
     }
 }

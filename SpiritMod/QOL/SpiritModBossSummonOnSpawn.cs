@@ -8,13 +8,15 @@ using SpiritMod.NPCs.Boss.MoonWizard;
 using SpiritMod.NPCs.Boss.ReachBoss;
 using SpiritMod.NPCs.Boss.Scarabeus;
 using SpiritMod.NPCs.Boss.SteamRaider;
+using ResonantSouls.SpiritMod.Core;
 
 namespace ResonantSouls.SpiritMod.QOL
 {
     [ExtendsFromMod(ModCompatibility.SpiritMod.Name)]
     [JITWhenModsEnabled(ModCompatibility.SpiritMod.Name)]
-    public class SpiritModBossSummonOnSpawn
+    public class SpiritModBossSummonOnSpawn : ModSystem
     {
+        public override bool IsLoadingEnabled(Mod mod) => ResonantSoulsSpiritConfig.Instance.QualityOfLife;
         public class AncientAvian : EModeNPCBehaviour
         {
             public override NPCMatcher CreateMatcher() => new NPCMatcher().MatchType(ModContent.NPCType<AncientFlyer>());

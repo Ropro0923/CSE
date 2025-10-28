@@ -1,6 +1,8 @@
+using ResonantSouls.SpiritMod.Forces;
 using SpiritMod.Items.Consumable.Food;
 using SpiritMod.Items.Sets.FrigidSet;
 using SpiritMod.Items.Sets.FrigidSet.FrigidArmor;
+using ResonantSouls.SpiritMod.Core;
 
 namespace ResonantSouls.SpiritMod.Enchants
 {
@@ -8,10 +10,13 @@ namespace ResonantSouls.SpiritMod.Enchants
     [JITWhenModsEnabled(ModCompatibility.SpiritMod.Name)]
     public class FrigidEnchant : BaseEnchant
     {
+        public override bool IsLoadingEnabled(Mod mod) => ResonantSoulsSpiritConfig.Instance.Enchantments;
         public override Color nameColor => new(67, 173, 247);
         public override void SetDefaults()
         {
             base.SetDefaults();
+            Item.width = 36;
+            Item.height = 40;
             Item.rare = ItemRarityID.Blue;
         }
         public override void UpdateAccessory(Player player, bool hideVisual)
@@ -30,10 +35,13 @@ namespace ResonantSouls.SpiritMod.Enchants
                 .AddTile<EnchantedTreeSheet>()
                 .Register();
         }
-        public class FrigidEffect : AccessoryEffect
-        {
-            public override Header ToggleHeader => null;
-            public override int ToggleItemType => ModContent.ItemType<FrigidEnchant>();
-        }
+    }
+    [ExtendsFromMod(ModCompatibility.SpiritMod.Name)]
+    [JITWhenModsEnabled(ModCompatibility.SpiritMod.Name)]
+    public class FrigidEffect : AccessoryEffect
+    {
+        public override bool IsLoadingEnabled(Mod mod) => ResonantSoulsSpiritConfig.Instance.Enchantments;
+        public override Header ToggleHeader => Header.GetHeader<AtlantisHeader>();
+        public override int ToggleItemType => ModContent.ItemType<FrigidEnchant>();
     }
 }

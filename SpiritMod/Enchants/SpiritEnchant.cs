@@ -1,5 +1,7 @@
+using ResonantSouls.SpiritMod.Forces;
 using SpiritMod.Items.Sets.SpiritSet;
 using SpiritMod.Items.Sets.SpiritSet.SpiritArmor;
+using ResonantSouls.SpiritMod.Core;
 
 namespace ResonantSouls.SpiritMod.Enchants
 {
@@ -7,10 +9,13 @@ namespace ResonantSouls.SpiritMod.Enchants
     [JITWhenModsEnabled(ModCompatibility.SpiritMod.Name)]
     public class SpiritEnchant : BaseEnchant
     {
+        public override bool IsLoadingEnabled(Mod mod) => ResonantSoulsSpiritConfig.Instance.Enchantments;
         public override Color nameColor => new(107, 107, 223);
         public override void SetDefaults()
         {
             base.SetDefaults();
+            Item.width = 42;
+            Item.height = 40;
             Item.rare = ItemRarityID.Pink;
         }
         public override void UpdateAccessory(Player player, bool hideVisual)
@@ -29,10 +34,13 @@ namespace ResonantSouls.SpiritMod.Enchants
                 .AddTile<EnchantedTreeSheet>()
                 .Register();
         }
-        public class SpiritEffect : AccessoryEffect
-        {
-            public override Header ToggleHeader => null;
-            public override int ToggleItemType => ModContent.ItemType<SpiritEnchant>();
-        }
+    }
+    [ExtendsFromMod(ModCompatibility.SpiritMod.Name)]
+    [JITWhenModsEnabled(ModCompatibility.SpiritMod.Name)]
+    public class SpiritEffect : AccessoryEffect
+    {
+        public override bool IsLoadingEnabled(Mod mod) => ResonantSoulsSpiritConfig.Instance.Enchantments;
+        public override Header ToggleHeader => Header.GetHeader<WorldsHeader>();
+        public override int ToggleItemType => ModContent.ItemType<SpiritEnchant>();
     }
 }

@@ -269,3 +269,43 @@ WayfarerEnchant: {
 	DisplayName: Wayfarer Enchant
 	Tooltip: ""
 }
+
+GildedEnchant: {
+	DisplayName: Gilded Enchant
+	Tooltip: ""
+}
+
+AdventuresForce: {
+	DisplayName: Force of Adventures
+	Tooltip: ""
+}
+
+WorldsForce: {
+	DisplayName: Force of Worlds
+	Tooltip: ""
+}
+
+ApostleEnchant: {
+	DisplayName: Apostle Enchant
+	Tooltip: ""
+}
+
+AtlantisForce: {
+	DisplayName: Force of Atlantis
+	Tooltip: ""
+}
+
+FoesForce: {
+	DisplayName: Force of Foes
+	Tooltip: ""
+}
+
+ManaForce: {
+	DisplayName: Force of Mana
+	Tooltip: ""
+}
+
+EtherealitySoul: {
+	DisplayName: Soul of Ethereality
+	Tooltip: ""
+}

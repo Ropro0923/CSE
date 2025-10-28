@@ -1,7 +1,8 @@
+using ResonantSouls.SpiritMod.Forces;
 using SpiritMod.Items.Accessory.Leather;
 using SpiritMod.Items.Armor.WayfarerSet;
-using SpiritMod.Items.Sets.ReefhunterSet;
 using SpiritMod.Items.Weapon.Swung.Punching_Bag;
+using ResonantSouls.SpiritMod.Core;
 
 namespace ResonantSouls.SpiritMod.Enchants
 {
@@ -9,10 +10,13 @@ namespace ResonantSouls.SpiritMod.Enchants
     [JITWhenModsEnabled(ModCompatibility.SpiritMod.Name)]
     public class WayfarerEnchant : BaseEnchant
     {
+        public override bool IsLoadingEnabled(Mod mod) => ResonantSoulsSpiritConfig.Instance.Enchantments;
         public override Color nameColor => new(169, 127, 110);
         public override void SetDefaults()
         {
             base.SetDefaults();
+            Item.width = 44;
+            Item.height = 32;
             Item.rare = ItemRarityID.Orange;
         }
         public override void UpdateAccessory(Player player, bool hideVisual)
@@ -31,10 +35,13 @@ namespace ResonantSouls.SpiritMod.Enchants
                 .AddTile<EnchantedTreeSheet>()
                 .Register();
         }
-        public class WayfarerEffect : AccessoryEffect
-        {
-            public override Header ToggleHeader => null;
-            public override int ToggleItemType => ModContent.ItemType<WayfarerEnchant>();
-        }
+    }
+    [ExtendsFromMod(ModCompatibility.SpiritMod.Name)]
+    [JITWhenModsEnabled(ModCompatibility.SpiritMod.Name)]
+    public class WayfarerEffect : AccessoryEffect
+    {
+        public override bool IsLoadingEnabled(Mod mod) => ResonantSoulsSpiritConfig.Instance.Enchantments;
+        public override Header ToggleHeader => Header.GetHeader<AdventuresHeader>();
+        public override int ToggleItemType => ModContent.ItemType<WayfarerEnchant>();
     }
 }

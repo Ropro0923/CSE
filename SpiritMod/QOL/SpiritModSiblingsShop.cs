@@ -12,6 +12,7 @@ namespace ResonantSouls.SpiritMod.QOL
     public class SpiritModSiblingsShop : GlobalNPC
     {
         public override bool InstancePerEntity => true;
+        public override bool IsLoadingEnabled(Mod mod) => ResonantSoulsSpiritConfig.Instance.QualityOfLife;
         public override void ModifyShop(NPCShop shop)
         {
             if (shop.NpcType == ModContent.NPCType<LumberJack>())
@@ -44,6 +45,7 @@ namespace ResonantSouls.SpiritMod.QOL
     [JITWhenModsEnabled(ModCompatibility.SpiritMod.Name)]   
     public class SpiritModMutantShop : ModSystem
     {
+        public override bool IsLoadingEnabled(Mod mod) => ResonantSoulsSpiritConfig.Instance.QualityOfLife;
         public override void PostSetupContent()
         {
             ModCompatibility.Fargowiltas.Mod.Call("AddSummon", 1f, "SpiritMod", "ScarabIdol", () => MyWorld.DownedScarabeus, Item.buyPrice(platinum: 0, gold: 4, silver: 10, copper: 0));

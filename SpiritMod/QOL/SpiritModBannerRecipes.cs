@@ -19,6 +19,7 @@ using SpiritMod.Items.Sets.TideDrops;
 using SpiritMod.Items.Weapon.Summon;
 using SpiritMod.Items.Weapon.Summon.ElectricGun;
 using SpiritMod.Items.Weapon.Yoyo;
+using ResonantSouls.SpiritMod.Core;
 
 namespace ResonantSouls.SpiritMod.QOL
 {
@@ -26,7 +27,7 @@ namespace ResonantSouls.SpiritMod.QOL
     [JITWhenModsEnabled(ModCompatibility.SpiritMod.Name)]
     public class SpiritModBannerRecipes : ModSystem
     {
-        public override bool IsLoadingEnabled(Mod mod) => FargoServerConfig.Instance.BannerRecipes;
+        public override bool IsLoadingEnabled(Mod mod) => FargoServerConfig.Instance.BannerRecipes && ResonantSoulsSpiritConfig.Instance.QualityOfLife;
         public override void AddRecipes()
         {
             Recipe.Create(ModContent.ItemType<Obolos>())
