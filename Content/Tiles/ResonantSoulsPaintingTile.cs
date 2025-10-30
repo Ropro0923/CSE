@@ -1,0 +1,27 @@
+using Terraria.DataStructures;
+using Terraria.Localization;
+using Terraria.ObjectData;
+
+namespace ResonantSouls.Content.Tiles
+{
+    public class ResonantSoulsPaintingTile : ModTile
+    {
+        public override void SetStaticDefaults()
+        {
+            Main.tileFrameImportant[Type] = true;
+            Main.tileLavaDeath[Type] = true;
+            TileID.Sets.FramesOnKillWall[Type] = true;
+            var data = TileObjectData.newTile;
+            data.CopyFrom(TileObjectData.Style3x3Wall);
+            data.Width = 5;
+            data.Height = 5;
+            data.Origin = new Point16(2, 2);
+            data.CoordinateHeights = [16, 16, 16, 16, 16];
+            data.CoordinateWidth = 16;
+            data.CoordinatePadding = 2;
+            TileObjectData.addTile(Type);
+            AddMapEntry(new Color(120, 85, 60), Language.GetText("MapObject.Painting"));
+            DustType = DustID.WoodFurniture;
+        }
+    }
+}

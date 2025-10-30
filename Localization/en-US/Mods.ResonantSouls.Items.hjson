@@ -374,3 +374,12 @@ SporePouch: {
 	DisplayName: Spore Pouch
 	Tooltip: Summons Snaptrapper
 }
+
+ResonantSoulsPainting: {
+	DisplayName: Resonant Souls
+	Tooltip:
+		'''
+		Special thanks all of our contributors and to the people who inspired us!
+		Hold SHIFT to view the full credits
+		'''
+}

@@ -1,6 +1,7 @@
 using SpiritMod.NPCs.Town;
 using SpiritMod.NPCs.Town.Oracle;
 using ResonantSouls.SpiritMod.Core;
+using Fargowiltas.Common.Configs;
 
 namespace ResonantSouls.SpiritMod.QOL
 {
@@ -8,14 +9,16 @@ namespace ResonantSouls.SpiritMod.QOL
     [JITWhenModsEnabled(ModCompatibility.SpiritMod.Name)]
     public class SpiritModCaughtNPCs : ModSystem
     {
-        public override bool IsLoadingEnabled(Mod mod) => ResonantSoulsSpiritConfig.Instance.QualityOfLife;
-        public static void RegisterSpiritModCaughtNPCs()
+        public override bool IsLoadingEnabled(Mod mod) => FargoServerConfig.Instance.CatchNPCs && ResonantSoulsSpiritConfig.Instance.QualityOfLife;
+        public override void Load()
         {
-            ModCompatibility.Fargowiltas.Mod.Call("AddCaughtNPC", "Adventurer", ModContent.NPCType<Adventurer>(), ResonantSouls.Instance.Name);
-            ModCompatibility.Fargowiltas.Mod.Call("AddCaughtNPC", "Gambler", ModContent.NPCType<Gambler>(), ResonantSouls.Instance.Name);
-            ModCompatibility.Fargowiltas.Mod.Call("AddCaughtNPC", "Bandit", ModContent.NPCType<Rogue>(), ResonantSouls.Instance.Name);
-            ModCompatibility.Fargowiltas.Mod.Call("AddCaughtNPC", "Enchanter", ModContent.NPCType<RuneWizard>(), ResonantSouls.Instance.Name);
-            ModCompatibility.Fargowiltas.Mod.Call("AddCaughtNPC", "Oracle", ModContent.NPCType<Oracle>(), ResonantSouls.Instance.Name);
+            Mod Fargowiltas = ModCompatibility.Fargowiltas.Mod;
+
+            Fargowiltas.Call("AddCaughtNPC", "Adventurer", ModContent.NPCType<Adventurer>(), Mod.Name);
+            Fargowiltas.Call("AddCaughtNPC", "Gambler", ModContent.NPCType<Gambler>(), Mod.Name);
+            Fargowiltas.Call("AddCaughtNPC", "Bandit", ModContent.NPCType<Rogue>(), Mod.Name);
+            Fargowiltas.Call("AddCaughtNPC", "Enchanter", ModContent.NPCType<RuneWizard>(), Mod.Name);
+            Fargowiltas.Call("AddCaughtNPC", "Oracle", ModContent.NPCType<Oracle>(), Mod.Name);
         }
     }
 }

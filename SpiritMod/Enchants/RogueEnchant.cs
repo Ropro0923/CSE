@@ -4,6 +4,10 @@ using SpiritMod.Items.Accessory.Leather;
 using SpiritMod.Items.Armor;
 using SpiritMod.Items.Weapon.Thrown;
 using ResonantSouls.SpiritMod.Core;
+using FargowiltasSouls.Content.UI.Elements;
+using Luminance.Assets;
+using Microsoft.Xna.Framework.Graphics;
+using FargowiltasSouls;
 
 namespace ResonantSouls.SpiritMod.Enchants
 {
@@ -43,6 +47,29 @@ namespace ResonantSouls.SpiritMod.Enchants
     {
         public override bool IsLoadingEnabled(Mod mod) => ResonantSoulsSpiritConfig.Instance.Enchantments;
         public override Header ToggleHeader => Header.GetHeader<AdventuresHeader>();
+        public override bool ExtraAttackEffect => true;
         public override int ToggleItemType => ModContent.ItemType<RogueEnchant>();
+        int KunaiCharge = 0;
+        int KunaiCooldown;
+        public override void PostUpdate(Player player)
+        {
+            KunaiCooldown = player.ForceEffect<RogueEffect>() ? 180 : 360;
+
+            if (KunaiCharge < KunaiCooldown)
+                KunaiCharge++;
+
+            if (player.whoAmI == Main.myPlayer)
+                CooldownBarManager.Activate("KunaiCooldown", ResonantSoulsUtilities.GetEnchantTexture("RogueEnchant").Value, new(216, 175, 113),
+                () => (float)KunaiCharge / KunaiCooldown, activeFunction: player.HasEffect<RogueEffect>, displayAtFull: true);
+
+            if (KunaiCharge >= KunaiCooldown)
+            {
+                RogueDash(player);
+            }
+            void RogueDash(Player player)
+            {
+                //  
+            }
+        }
     }
 }
