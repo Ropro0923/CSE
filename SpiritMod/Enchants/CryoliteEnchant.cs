@@ -2,6 +2,7 @@ using SpiritMod.Items.Sets.CryoliteSet;
 using SpiritMod.Items.Sets.CryoliteSet.CryoliteArmor;
 using SpiritMod.Items.Sets.CryoliteSet.CryoSword;
 using SpiritMod.Items.Placeable.IceSculpture;
+using SpiritMod.Items.Sets.ArcaneZoneSubclass;
 using ResonantSouls.SpiritMod.Forces;
 using ResonantSouls.SpiritMod.Core;
 
@@ -32,7 +33,7 @@ namespace ResonantSouls.SpiritMod.Enchants
                 .AddIngredient<CryoliteLegs>()
                 .AddIngredient<IceFlinxSculpture>()
                 .AddIngredient<CryoSword>()
-                .AddIngredient<CryoStaff>()
+                .AddIngredient<SlowCodex>()
                 .AddTile<EnchantedTreeSheet>()
                 .Register();
         }

@@ -2,6 +2,8 @@ using ResonantSouls.SpiritMod.Forces;
 using SpiritMod.Items.Accessory.Leather;
 using SpiritMod.Items.Armor.LeatherArmor;
 using SpiritMod.Items.DonatorItems;
+using SpiritMod.Items.Sets.HusktalkSet.;
+using SpiritMod.Items.Ammo.Arrow;
 using ResonantSouls.SpiritMod.Core;
 
 namespace ResonantSouls.SpiritMod.Enchants
@@ -30,8 +32,8 @@ namespace ResonantSouls.SpiritMod.Enchants
                 .AddIngredient<LeatherPlate>()
                 .AddIngredient<LeatherLegs>()
                 .AddIngredient<DodgeBall>()
-                .AddIngredient<LeatherShield>()
-                .AddIngredient<LeatherBoots>()
+                .AddIngredient<HuskstalkBow>()
+                .AddIngredient<SepulchreArrow>(50)
                 .AddTile<EnchantedTreeSheet>()
                 .Register();
         }

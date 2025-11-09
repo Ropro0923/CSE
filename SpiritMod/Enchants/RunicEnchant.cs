@@ -1,5 +1,7 @@
 using ResonantSouls.SpiritMod.Forces;
 using SpiritMod.Items.Sets.RunicSet;
+using SpiritMod.Items.Material;
+using SpiritMod.Items.Consumable.Potion;
 using SpiritMod.Items.Sets.RunicSet.RunicArmor;
 using SpiritMod.Items.Sets.SpiritSet;
 using ResonantSouls.SpiritMod.Core;
@@ -30,8 +32,8 @@ namespace ResonantSouls.SpiritMod.Enchants
                 .AddIngredient<RunicPlate>()
                 .AddIngredient<RunicGreaves>()
                 .AddIngredient<SpiritRune>()
-                .AddIngredient<PhantomArc>()
-                .AddIngredient<SpiritGun>()
+                .AddIngredient<SoulBloom>(5)
+                .AddIngredient<RunePotion>(3)
                 .AddTile<EnchantedTreeSheet>()
                 .Register();
         }

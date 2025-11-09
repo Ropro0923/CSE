@@ -1,6 +1,7 @@
 using ResonantSouls.SpiritMod.Forces;
 using SpiritMod.Items.Sets.SeraphSet;
 using SpiritMod.Items.Sets.SeraphSet.SeraphArmor;
+using SpiritMod.Items.BossLoot.MoonWizardDrops.JellynautHelmet;
 using SpiritMod.Items.Weapon.Summon;
 using ResonantSouls.SpiritMod.Core;
 
@@ -30,8 +31,8 @@ namespace ResonantSouls.SpiritMod.Enchants
                 .AddIngredient<SeraphArmor>()
                 .AddIngredient<SeraphLegs>()
                 .AddIngredient<GloomgusStaff>()
-                .AddIngredient<GlowSting>()
-                .AddIngredient<WayfinderTorch>()
+                .AddIngredient<JellynautBubble>()
+                .AddIngredient<WayfinderTorch>(275)
                 .AddTile<EnchantedTreeSheet>()
                 .Register();
         }

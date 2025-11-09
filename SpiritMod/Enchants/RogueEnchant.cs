@@ -34,7 +34,7 @@ namespace ResonantSouls.SpiritMod.Enchants
                 .AddIngredient<RogueHood>()
                 .AddIngredient<RoguePlate>()
                 .AddIngredient<RoguePants>()
-                .AddIngredient<RogueCrest>()
+                .AddIngredient<AssassinMagazine>()
                 .AddIngredient<LeatherGlove>()
                 .AddIngredient<Kunai_Throwing>(250)
                 .AddTile<EnchantedTreeSheet>()

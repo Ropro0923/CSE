@@ -1,7 +1,7 @@
 using ResonantSouls.SpiritMod.Forces;
-using SpiritMod.Items.BossLoot.ScarabeusDrops.AdornedBow;
+using SpiritMod.Items.Consumable.Food;
 using SpiritMod.Items.BossLoot.ScarabeusDrops.ChitinArmor;
-using SpiritMod.Items.BossLoot.ScarabeusDrops.Khopesh;
+using SpiritMod.Items.BossLoot.ScarabeusDrops;
 using ResonantSouls.SpiritMod.Core;
 
 namespace ResonantSouls.SpiritMod.Enchants
@@ -29,8 +29,8 @@ namespace ResonantSouls.SpiritMod.Enchants
                 .AddIngredient<ChitinHelmet>()
                 .AddIngredient<ChitinChestplate>()
                 .AddIngredient<ChitinLeggings>()
-                .AddIngredient<RoyalKhopesh>()
-                .AddIngredient<ScarabBow>()
+                .AddIngredient<Hummus>()
+                .AddIngredient<ChitinAxe>()
                 .AddIngredient(ModCompatibility.SpiritMod.Mod.Find<ModItem>("GildedScarab").Type, 1)
                 .AddTile<EnchantedTreeSheet>()
                 .Register();

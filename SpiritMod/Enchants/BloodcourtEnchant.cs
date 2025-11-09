@@ -1,8 +1,9 @@
 using ResonantSouls.SpiritMod.Forces;
 using SpiritMod.Items.Sets.BloodcourtSet;
 using SpiritMod.Items.Sets.BloodcourtSet.BloodCourt;
-using SpiritMod.Items.Sets.BloodcourtSet.Headsplitter;
-using SpiritMod.Items.Sets.BloodcourtSet.Heartstrike;
+using SpiritMod.Items.BossLoot.OccultistDrops;
+using SpiritMod.Items.Sets.SummonsMisc.TwoFaceMask;
+using SpiritMod.Items.Sets.ArcaneZoneSubclass;
 using ResonantSouls.SpiritMod.Core;
 
 namespace ResonantSouls.SpiritMod.Enchants
@@ -30,9 +31,9 @@ namespace ResonantSouls.SpiritMod.Enchants
                 .AddIngredient<BloodCourtHead>()
                 .AddIngredient<BloodCourtChestplate>()
                 .AddIngredient<BloodCourtLeggings>()
-                .AddIngredient<Headsplitter>()
-                .AddIngredient<Heartstrike>()
-                .AddIngredient<FangTome>()
+                .AddIngredient<HealingCodex>()
+                .AddIngredient<Handball>()
+                .AddIngredient<MimeSummon>()
                 .AddTile<EnchantedTreeSheet>()
                 .Register();
         }

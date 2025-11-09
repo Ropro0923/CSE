@@ -2,6 +2,8 @@ using ResonantSouls.SpiritMod.Core;
 using ResonantSouls.SpiritMod.Forces;
 using SpiritMod.Items.BossLoot.AvianDrops;
 using SpiritMod.Items.BossLoot.AvianDrops.ApostleArmor;
+using SpiritMod.Items.Weapon.Magic;
+using SpiritMod.Items.Sets.BowsMisc.StarSpray;
 
 namespace ResonantSouls.SpiritMod.Enchants
 {
@@ -27,8 +29,8 @@ namespace ResonantSouls.SpiritMod.Enchants
             CreateRecipe()
                 .AddIngredient<TalonHeaddress>()
                 .AddIngredient<TalonGarb>()
-                .AddIngredient<SkeletalonStaff>()
-                .AddIngredient<SoaringScapula>()
+                .AddIngredient<ValkyrieSpear>()
+                .AddIngredient<StarlightBow>()
                 .AddIngredient<TalonPiercer>()
                 .AddTile<EnchantedTreeSheet>()
                 .Register();

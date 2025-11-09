@@ -2,6 +2,7 @@ using ResonantSouls.SpiritMod.Forces;
 using SpiritMod.Items.BossLoot.DuskingDrops;
 using SpiritMod.Items.BossLoot.DuskingDrops.DuskArmor;
 using SpiritMod.Items.DonatorItems;
+using SpiritMod.Items.Sets.SlingHammerSubclass;
 using ResonantSouls.SpiritMod.Core;
 
 namespace ResonantSouls.SpiritMod.Enchants
@@ -31,7 +32,7 @@ namespace ResonantSouls.SpiritMod.Enchants
                 .AddIngredient<DuskLeggings>()
                 .AddIngredient<BladeofYouKai>()
                 .AddIngredient<Shadowmoor>()
-                .AddIngredient<UmbraStaff>()
+                .AddIngredient<PossessedHammer>()
                 .AddTile<EnchantedTreeSheet>()
                 .Register();
         }

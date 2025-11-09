@@ -1,7 +1,8 @@
 using ResonantSouls.SpiritMod.Forces;
-using SpiritMod.Items.Accessory.Leather;
 using SpiritMod.Items.Armor.WayfarerSet;
 using SpiritMod.Items.Weapon.Swung.Punching_Bag;
+using SpiritMod.Items.Placeable.Furniture;
+using SpiritMod.Items.Consumable;
 using ResonantSouls.SpiritMod.Core;
 
 namespace ResonantSouls.SpiritMod.Enchants
@@ -29,8 +30,8 @@ namespace ResonantSouls.SpiritMod.Enchants
                 .AddIngredient<WayfarerHead>()
                 .AddIngredient<WayfarerBody>()
                 .AddIngredient<WayfarerLegs>()
-                .AddIngredient<ExplorerTreads>()
-                .AddIngredient<TechBoots>()
+                .AddIngredient<OccultistMap>()
+                .AddIngredient<MapScroll>()
                 .AddIngredient<Punching_Bag>()
                 .AddTile<EnchantedTreeSheet>()
                 .Register();
