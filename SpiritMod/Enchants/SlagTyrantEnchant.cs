@@ -1,7 +1,8 @@
 using ResonantSouls.SpiritMod.Forces;
-using SpiritMod.Items.Sets.ClubSubclass;
 using SpiritMod.Items.Sets.SlagSet;
+using SpiritMod.Items.Accessory;
 using SpiritMod.Items.Sets.SlagSet.FieryArmor;
+using SpiritMod.Items.Weapon.Yoyo;
 using ResonantSouls.SpiritMod.Core;
 
 namespace ResonantSouls.SpiritMod.Enchants
@@ -30,9 +31,9 @@ namespace ResonantSouls.SpiritMod.Enchants
                 .AddIngredient<ObsidiusHelm>()
                 .AddIngredient<ObsidiusPlate>()
                 .AddIngredient<ObsidiusGreaves>()
-                .AddIngredient<Blasphemer>()
+                .AddIngredient<TheFireball>()
                 .AddIngredient<FieryMagicLauncher>()
-                .AddIngredient<FierySummonStaff>()
+                .AddIngredient<HellEater>()
                 .AddTile<EnchantedTreeSheet>()
                 .Register();
         }

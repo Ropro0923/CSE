@@ -33,7 +33,7 @@ namespace ResonantSouls.SpiritMod.Enchants
                 .AddIngredient<DaybloomBody>()
                 .AddIngredient<DaybloomLegs>()
                 .AddIngredient<HangingSunPot>()
-                .AddIngredient<BriarFlowerItem>()
+                .AddIngredient<PottedSakura>()
                 .AddIngredient<CactusStaff>()
                 .AddTile<EnchantedTreeSheet>()
                 .Register();

@@ -1,6 +1,7 @@
 using ResonantSouls.SpiritMod.Forces;
 using SpiritMod.Items.Consumable.Food;
 using SpiritMod.Items.Sets.FrigidSet;
+using SpiritMod.Items.Accessory;
 using SpiritMod.Items.Sets.FrigidSet.FrigidArmor;
 using ResonantSouls.SpiritMod.Core;
 
@@ -31,7 +32,7 @@ namespace ResonantSouls.SpiritMod.Enchants
                 .AddIngredient<FrigidChestplate>()
                 .AddIngredient<FrigidLegs>()
                 .AddIngredient<IcySpear>()
-                .AddIngredient<FrostSpine>()
+                .AddIngredient<FrostGiantBelt>()
                 .AddIngredient<IceBerries>()
                 .AddTile<EnchantedTreeSheet>()
                 .Register();

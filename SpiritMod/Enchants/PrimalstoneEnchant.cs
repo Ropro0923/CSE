@@ -1,5 +1,8 @@
 using ResonantSouls.SpiritMod.Forces;
+using SpiritMod.Items.Sets.SwordsMisc.EternalSwordTree;
 using SpiritMod.Items.BossLoot.AtlasDrops;
+using SpiritMod.Items.BossLoot.InfernonDrops;
+using SpiritMod.Items.BossLoot.DuskingDrops;
 using SpiritMod.Items.BossLoot.AtlasDrops.PrimalstoneArmor;
 using ResonantSouls.SpiritMod.Core;
 
@@ -29,9 +32,9 @@ namespace ResonantSouls.SpiritMod.Enchants
                 .AddIngredient<PrimalstoneFaceplate>()
                 .AddIngredient<PrimalstoneBreastplate>()
                 .AddIngredient<PrimalstoneLeggings>()
-                .AddIngredient<Mountain>()
-                .AddIngredient<Earthshatter>()
-                .AddIngredient<QuakeFist>()
+                .AddIngredient<DemoncomboSword>()
+                .AddIngredient<InfernalSword>()
+                .AddIngredient<ShadowSphere>()
                 .AddTile<EnchantedTreeSheet>()
                 .Register();
         }

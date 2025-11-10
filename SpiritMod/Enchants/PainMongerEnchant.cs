@@ -1,6 +1,8 @@
 using ResonantSouls.SpiritMod.Forces;
 using SpiritMod.Items.BossLoot.InfernonDrops;
 using SpiritMod.Items.BossLoot.InfernonDrops.InfernonArmor;
+using SpiritMod.Items.DonatorItems;
+using SpiritMod.Items.OlympiumSet.BetrayersChains;
 using ResonantSouls.SpiritMod.Core;
 
 namespace ResonantSouls.SpiritMod.Enchants
@@ -30,8 +32,8 @@ namespace ResonantSouls.SpiritMod.Enchants
                 .AddIngredient<InfernalBreastplate>()
                 .AddIngredient<InfernalGreaves>()
                 .AddIngredient<EyeOfTheInferno>()
-                .AddIngredient<InfernalStaff>()
-                .AddIngredient<SevenSins>()
+                .AddIngredient<EternalAsh>()
+                .AddIngredient<BetrayersChains>()
                 .AddTile<EnchantedTreeSheet>()
                 .Register();
         }

@@ -1,6 +1,7 @@
 using ResonantSouls.SpiritMod.Forces;
 using SpiritMod.Items.Sets.ReefhunterSet;
 using SpiritMod.Items.Sets.TideDrops;
+using SpiritMod.Items.Sets.TideDrops.Whirltide;
 using SpiritMod.Items.Sets.TideDrops.StreamSurfer;
 using ResonantSouls.SpiritMod.Core;
 
@@ -32,7 +33,7 @@ namespace ResonantSouls.SpiritMod.Enchants
                 .AddIngredient<StreamSurferLeggings>()
                 .AddIngredient<CoconutGun>()
                 .AddIngredient<PendantOfTheOcean>()
-                .AddIngredient<Minifish>()
+                .AddIngredient<Whirltide>()
                 .AddTile<EnchantedTreeSheet>()
                 .Register();
         }

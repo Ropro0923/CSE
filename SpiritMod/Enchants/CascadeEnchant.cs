@@ -3,6 +3,7 @@ using SpiritMod.Items.Sets.CascadeSet.Armor;
 using SpiritMod.Items.Sets.CascadeSet.Basking_Shark;
 using SpiritMod.Items.Sets.CascadeSet.BubbleMine;
 using SpiritMod.Items.Sets.CascadeSet.Reef_Wrath;
+using SpiritMod.Items.Consumable.Food;
 using ResonantSouls.SpiritMod.Core;
 
 namespace ResonantSouls.SpiritMod.Enchants
@@ -32,7 +33,7 @@ namespace ResonantSouls.SpiritMod.Enchants
                 .AddIngredient<CascadeChestplate>()
                 .AddIngredient<CascadeLeggings>()
                 .AddIngredient<Basking_Shark>()
-                .AddIngredient<Reef_Wrath>()
+                .AddIngredient<Sushi>()
                 .AddIngredient<BubbleMine>(140)
                 .AddTile<EnchantedTreeSheet>()
                 .Register();

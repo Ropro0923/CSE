@@ -4,6 +4,8 @@ using SpiritMod.Items.BossLoot.StarplateDrops;
 using SpiritMod.Items.BossLoot.StarplateDrops.StarArmor;
 using SpiritMod.Items.BossLoot.StarplateDrops.StarplateGlove;
 using SpiritMod.Items.Sets.SwordsMisc.AlphaBladeTree;
+using SpiritMod.Items.Sets.MagicMisc.NightSkyStaff;
+using SpiritMod.Items.Sets.GunsMisc.MeteoriteSpewer;
 
 namespace ResonantSouls.SpiritMod.Enchants
 {
@@ -31,9 +33,9 @@ namespace ResonantSouls.SpiritMod.Enchants
                 .AddIngredient<StarMask>()
                 .AddIngredient<StarPlate>()
                 .AddIngredient<StarLegs>()
-                .AddIngredient<Starblade>()
-                .AddIngredient<OrionPistol>()
-                .AddIngredient<StarplateGlove>()
+                .AddIngredient<StarMap>()
+                .AddIngredient<NightSkyStaff>()
+                .AddIngredient<Meteorite_Spewer>()
                 .AddTile<EnchantedTreeSheet>()
                 .Register();
         }

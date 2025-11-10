@@ -3,6 +3,7 @@ using SpiritMod.Items.Sets.ClubSubclass;
 using SpiritMod.Items.Sets.FloranSet;
 using SpiritMod.Items.Sets.FloranSet.FloranArmor;
 using SpiritMod.Items.Sets.GladeWraithDrops;
+using SpiritMod.Items.Sets.ArcaneZoneSubclass;
 using ResonantSouls.SpiritMod.Core;
 
 namespace ResonantSouls.SpiritMod.Enchants
@@ -33,7 +34,7 @@ namespace ResonantSouls.SpiritMod.Enchants
                 .AddIngredient<FLegs>()
                 .AddIngredient<HuskstalkStaff>()
                 .AddIngredient<FloranBludgeon>()
-                .AddIngredient<FloranReacher>()
+                .AddIngredient<StaminaCodex>()
                 .AddTile<EnchantedTreeSheet>()
                 .Register();
         }

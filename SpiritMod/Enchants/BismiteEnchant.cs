@@ -3,6 +3,8 @@ using ResonantSouls.SpiritMod.Forces;
 using SpiritMod.Items.Accessory.Leather;
 using SpiritMod.Items.Sets.BismiteSet;
 using SpiritMod.Items.Sets.BismiteSet.BismiteArmor;
+using SpiritMod.Items.Sets.SepulchreLoot.AccursedBlade;
+using SpiritMod.Items.Consumable.Potion;
 
 namespace ResonantSouls.SpiritMod.Enchants
 {
@@ -30,9 +32,9 @@ namespace ResonantSouls.SpiritMod.Enchants
                 .AddIngredient<BismiteHelmet>()
                 .AddIngredient<BismiteChestplate>()
                 .AddIngredient<BismiteLeggings>()
-                .AddIngredient<BismiteShield>()
+                .AddIngredient<BismitePotion>(3)
                 .AddIngredient<BismiteChakra>()
-                .AddIngredient<BismiteStaff>()
+                .AddIngredient<AccursedBlade>()
                 .AddTile<EnchantedTreeSheet>()
                 .Register();
         }

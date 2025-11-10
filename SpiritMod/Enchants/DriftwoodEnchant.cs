@@ -1,7 +1,7 @@
 using SpiritMod.Items.Sets.FloatingItems.Driftwood;
 using SpiritMod.Items.Sets.FloatingItems.Driftwood.DriftwoodArmor;
 using SpiritMod.Items.Sets.CascadeSet.Coral_Catcher;
-using SpiritMod.Items.Weapon.Summon.ButterflyStaff;
+using SpiritMod.Items.Consumable.Fish;
 using FargowiltasSouls.Core.Toggler.Content;
 using ResonantSouls.SpiritMod.Core;
 
@@ -31,7 +31,7 @@ namespace ResonantSouls.SpiritMod.Enchants
                 .AddIngredient<DriftwoodHelmet>()
                 .AddIngredient<DriftwoodChestplate>()
                 .AddIngredient<DriftwoodLeggings>()
-                .AddIngredient<ButterflyStaff>()
+                .AddIngredient<FishChips>()
                 .AddIngredient<Coral_Catcher>()
                 .AddIngredient<DriftwoodSword>()
                 .AddTile<EnchantedTreeSheet>()
