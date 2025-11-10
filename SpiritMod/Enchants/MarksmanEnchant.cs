@@ -1,8 +1,7 @@
 using ResonantSouls.SpiritMod.Forces;
-using SpiritMod.Items.Accessory.Leather;
 using SpiritMod.Items.Armor.LeatherArmor;
 using SpiritMod.Items.DonatorItems;
-using SpiritMod.Items.Sets.HusktalkSet.;
+using SpiritMod.Items.Sets.HuskstalkSet;
 using SpiritMod.Items.Ammo.Arrow;
 using ResonantSouls.SpiritMod.Core;
 
@@ -20,7 +19,7 @@ namespace ResonantSouls.SpiritMod.Enchants
             Item.width = 44;
             Item.height = 32;
             Item.rare = ModContent.GetInstance<LeatherHood>().Item.rare;
-            Item.value = ModContent.GetInstance<LeatherHood>().Item.value + ModContent.GetInstance<LeatherPlate>().Item.value + ModContent.GetInstance<LeatherLegs>().Item.value + ModContent.GetInstance<DodgeBall>().Item.value + ModContent.GetInstance<LeatherShield>().Item.value + ModContent.GetInstance<LeatherBoots>().Item.value;
+            Item.value = ModContent.GetInstance<LeatherHood>().Item.value + ModContent.GetInstance<LeatherPlate>().Item.value + ModContent.GetInstance<LeatherLegs>().Item.value + ModContent.GetInstance<DodgeBall>().Item.value + ModContent.GetInstance<HuskstalkBow>().Item.value + ModContent.GetInstance<SepulchreArrow>().Item.value * 50;
         }
         public override void UpdateAccessory(Player player, bool hideVisual)
         {

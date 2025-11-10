@@ -22,7 +22,7 @@ namespace ResonantSouls.SpiritMod.Enchants
             Item.width = 44;
             Item.height = 32;
             Item.rare = ModContent.GetInstance<WayfarerHead>().Item.rare;
-            Item.value = ModContent.GetInstance<WayfarerHead>().Item.value + ModContent.GetInstance<WayfarerBody>().Item.value + ModContent.GetInstance<WayfarerLegs>().Item.value + ModContent.GetInstance<ExplorerTreads>().Item.value + ModContent.GetInstance<TechBoots>().Item.value + ModContent.GetInstance<Punching_Bag>().Item.value;
+            Item.value = ModContent.GetInstance<WayfarerHead>().Item.value + ModContent.GetInstance<WayfarerBody>().Item.value + ModContent.GetInstance<WayfarerLegs>().Item.value + ModContent.GetInstance<OccultistMap>().Item.value + ModContent.GetInstance<MapScroll>().Item.value + ModContent.GetInstance<Punching_Bag>().Item.value;
         }
         public override void UpdateAccessory(Player player, bool hideVisual)
         {

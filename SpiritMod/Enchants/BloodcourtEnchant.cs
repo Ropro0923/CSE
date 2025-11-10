@@ -20,7 +20,7 @@ namespace ResonantSouls.SpiritMod.Enchants
             Item.width = 36;
             Item.height = 40;
             Item.rare = ModContent.GetInstance<BloodCourtHead>().Item.rare;
-            Item.value = ModContent.GetInstance<BloodCourtHead>().Item.value + ModContent.GetInstance<BloodCourtChestplate>().Item.value + ModContent.GetInstance<BloodCourtLeggings>().Item.value + ModContent.GetInstance<Headsplitter>().Item.value + ModContent.GetInstance<Heartstrike>().Item.value + ModContent.GetInstance<FangTome>().Item.value;
+            Item.value = ModContent.GetInstance<BloodCourtHead>().Item.value + ModContent.GetInstance<BloodCourtChestplate>().Item.value + ModContent.GetInstance<BloodCourtLeggings>().Item.value + ModContent.GetInstance<HealingCodex>().Item.value + ModContent.GetInstance<Handball>().Item.value + ModContent.GetInstance<MimeSummon>().Item.value;
         }
         public override void UpdateAccessory(Player player, bool hideVisual)
         {

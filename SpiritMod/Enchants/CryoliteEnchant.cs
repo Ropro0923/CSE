@@ -20,7 +20,7 @@ namespace ResonantSouls.SpiritMod.Enchants
             Item.width = 36;
             Item.height = 40;
             Item.rare = ModContent.GetInstance<CryoliteHead>().Item.rare;
-            Item.value = ModContent.GetInstance<CryoliteHead>().Item.value + ModContent.GetInstance<CryoliteBody>().Item.value + ModContent.GetInstance<CryoliteLegs>().Item.value + ModContent.GetInstance<IceFlinxSculpture>().Item.value + ModContent.GetInstance<CryoSword>().Item.value + ModContent.GetInstance<CryoStaff>().Item.value;
+            Item.value = ModContent.GetInstance<CryoliteHead>().Item.value + ModContent.GetInstance<CryoliteBody>().Item.value + ModContent.GetInstance<CryoliteLegs>().Item.value + ModContent.GetInstance<IceFlinxSculpture>().Item.value + ModContent.GetInstance<CryoSword>().Item.value + ModContent.GetInstance<SlowCodex>().Item.value;
         }
         public override void UpdateAccessory(Player player, bool hideVisual)
         {

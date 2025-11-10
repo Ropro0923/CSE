@@ -20,7 +20,7 @@ namespace ResonantSouls.SpiritMod.Enchants
             Item.width = 36;
             Item.height = 40;
             Item.rare = ModContent.GetInstance<RunicHood>().Item.rare;
-            Item.value = ModContent.GetInstance<RunicHood>().Item.value + ModContent.GetInstance<RunicPlate>().Item.value + ModContent.GetInstance<RunicGreaves>().Item.value + ModContent.GetInstance<SpiritRune>().Item.value + ModContent.GetInstance<PhantomArc>().Item.value + ModContent.GetInstance<SpiritGun>().Item.value;
+            Item.value = ModContent.GetInstance<RunicHood>().Item.value + ModContent.GetInstance<RunicPlate>().Item.value + ModContent.GetInstance<RunicGreaves>().Item.value + ModContent.GetInstance<SpiritRune>().Item.value + ModContent.GetInstance<SoulBloom>().Item.value * 5 + ModContent.GetInstance<RunePotion>().Item.value * 3;
         }
         public override void UpdateAccessory(Player player, bool hideVisual)
         {

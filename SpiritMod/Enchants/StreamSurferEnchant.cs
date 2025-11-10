@@ -19,7 +19,7 @@ namespace ResonantSouls.SpiritMod.Enchants
             Item.width = 36;
             Item.height = 40;
             Item.rare = ModContent.GetInstance<StreamSurferHelmet>().Item.rare;
-            Item.value = ModContent.GetInstance<StreamSurferHelmet>().Item.value + ModContent.GetInstance<StreamSurferChestplate>().Item.value + ModContent.GetInstance<StreamSurferLeggings>().Item.value + ModContent.GetInstance<CoconutGun>().Item.value + ModContent.GetInstance<PendantOfTheOcean>().Item.value + ModContent.GetInstance<Minifish>().Item.value;
+            Item.value = ModContent.GetInstance<StreamSurferHelmet>().Item.value + ModContent.GetInstance<StreamSurferChestplate>().Item.value + ModContent.GetInstance<StreamSurferLeggings>().Item.value + ModContent.GetInstance<CoconutGun>().Item.value + ModContent.GetInstance<PendantOfTheOcean>().Item.value + ModContent.GetInstance<Whirltide>().Item.value;
         }
         public override void UpdateAccessory(Player player, bool hideVisual)
         {

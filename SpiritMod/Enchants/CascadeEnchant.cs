@@ -2,7 +2,6 @@ using ResonantSouls.SpiritMod.Forces;
 using SpiritMod.Items.Sets.CascadeSet.Armor;
 using SpiritMod.Items.Sets.CascadeSet.Basking_Shark;
 using SpiritMod.Items.Sets.CascadeSet.BubbleMine;
-using SpiritMod.Items.Sets.CascadeSet.Reef_Wrath;
 using SpiritMod.Items.Consumable.Food;
 using ResonantSouls.SpiritMod.Core;
 
@@ -20,7 +19,7 @@ namespace ResonantSouls.SpiritMod.Enchants
             Item.width = 36;
             Item.height = 40;
             Item.rare = ModContent.GetInstance<CascadeHelmet>().Item.rare;
-            Item.value = ModContent.GetInstance<CascadeHelmet>().Item.value + ModContent.GetInstance<CascadeChestplate>().Item.value + ModContent.GetInstance<CascadeLeggings>().Item.value + ModContent.GetInstance<Basking_Shark>().Item.value + ModContent.GetInstance<Reef_Wrath>().Item.value + ModContent.GetInstance<BubbleMine>().Item.value;
+            Item.value = ModContent.GetInstance<CascadeHelmet>().Item.value + ModContent.GetInstance<CascadeChestplate>().Item.value + ModContent.GetInstance<CascadeLeggings>().Item.value + ModContent.GetInstance<Basking_Shark>().Item.value + ModContent.GetInstance<Sushi>().Item.value + ModContent.GetInstance<BubbleMine>().Item.value * 140;
         }
         public override void UpdateAccessory(Player player, bool hideVisual)
         {

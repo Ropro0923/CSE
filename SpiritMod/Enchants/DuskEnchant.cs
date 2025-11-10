@@ -19,7 +19,7 @@ namespace ResonantSouls.SpiritMod.Enchants
             Item.width = 56;
             Item.height = 50;
             Item.rare = ModContent.GetInstance<DuskHood>().Item.rare;
-            Item.value = ModContent.GetInstance<DuskHood>().Item.value + ModContent.GetInstance<DuskPlate>().Item.value + ModContent.GetInstance<DuskLeggings>().Item.value + ModContent.GetInstance<BladeofYouKai>().Item.value + ModContent.GetInstance<Shadowmoor>().Item.value + ModContent.GetInstance<UmbraStaff>().Item.value;
+            Item.value = ModContent.GetInstance<DuskHood>().Item.value + ModContent.GetInstance<DuskPlate>().Item.value + ModContent.GetInstance<DuskLeggings>().Item.value + ModContent.GetInstance<BladeofYouKai>().Item.value + ModContent.GetInstance<Shadowmoor>().Item.value + ModContent.GetInstance<PossessedHammer>().Item.value;
         }
         public override void UpdateAccessory(Player player, bool hideVisual)
         {

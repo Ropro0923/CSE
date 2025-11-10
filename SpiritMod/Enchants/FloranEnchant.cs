@@ -20,7 +20,7 @@ namespace ResonantSouls.SpiritMod.Enchants
             Item.width = 36;
             Item.height = 40;
             Item.rare = ModContent.GetInstance<FHelmet>().Item.rare;
-            Item.value = ModContent.GetInstance<FHelmet>().Item.value + ModContent.GetInstance<FPlate>().Item.value + ModContent.GetInstance<FLegs>().Item.value + ModContent.GetInstance<HuskstalkStaff>().Item.value + ModContent.GetInstance<FloranBludgeon>().Item.value + ModContent.GetInstance<FloranReacher>().Item.value;
+            Item.value = ModContent.GetInstance<FHelmet>().Item.value + ModContent.GetInstance<FPlate>().Item.value + ModContent.GetInstance<FLegs>().Item.value + ModContent.GetInstance<HuskstalkStaff>().Item.value + ModContent.GetInstance<FloranBludgeon>().Item.value + ModContent.GetInstance<StaminaCodex>().Item.value;
         }
         public override void UpdateAccessory(Player player, bool hideVisual)
         {

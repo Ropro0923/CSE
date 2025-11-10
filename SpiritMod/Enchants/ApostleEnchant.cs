@@ -19,7 +19,7 @@ namespace ResonantSouls.SpiritMod.Enchants
             Item.width = 44;
             Item.height = 48;
             Item.rare = ModContent.GetInstance<TalonHeaddress>().Item.rare;
-            Item.value = ModContent.GetInstance<TalonHeaddress>().Item.value + ModContent.GetInstance<TalonGarb>().Item.value + ModContent.GetInstance<SkeletalonStaff>().Item.value + ModContent.GetInstance<SoaringScapula>().Item.value + ModContent.GetInstance<TalonPiercer>().Item.value;
+            Item.value = ModContent.GetInstance<TalonHeaddress>().Item.value + ModContent.GetInstance<TalonGarb>().Item.value + ModContent.GetInstance<ValkyrieSpear>().Item.value + ModContent.GetInstance<StarlightBow>().Item.value + ModContent.GetInstance<TalonPiercer>().Item.value;
         }
         public override void UpdateAccessory(Player player, bool hideVisual)
         {

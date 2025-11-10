@@ -21,7 +21,7 @@ namespace ResonantSouls.SpiritMod.Enchants
             Item.width = 36;
             Item.height = 40;
             Item.rare = ModContent.GetInstance<StarMask>().Item.rare;
-            Item.value = ModContent.GetInstance<StarMask>().Item.value + ModContent.GetInstance<StarPlate>().Item.value + ModContent.GetInstance<StarLegs>().Item.value + ModContent.GetInstance<Starblade>().Item.value + ModContent.GetInstance<OrionPistol>().Item.value + ModContent.GetInstance<StarplateGlove>().Item.value;
+            Item.value = ModContent.GetInstance<StarMask>().Item.value + ModContent.GetInstance<StarPlate>().Item.value + ModContent.GetInstance<StarLegs>().Item.value + ModContent.GetInstance<StarMap>().Item.value + ModContent.GetInstance<NightSkyStaff>().Item.value + ModContent.GetInstance<Meteorite_Spewer>().Item.value;
         }
         public override void UpdateAccessory(Player player, bool hideVisual)
         {

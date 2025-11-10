@@ -2,8 +2,8 @@ using ResonantSouls.SpiritMod.Forces;
 using SpiritMod.Items.BossLoot.InfernonDrops;
 using SpiritMod.Items.BossLoot.InfernonDrops.InfernonArmor;
 using SpiritMod.Items.DonatorItems;
-using SpiritMod.Items.OlympiumSet.BetrayersChains;
 using ResonantSouls.SpiritMod.Core;
+using SpiritMod.Items.Sets.OlympiumSet.BetrayersChains;
 
 namespace ResonantSouls.SpiritMod.Enchants
 {
@@ -19,7 +19,7 @@ namespace ResonantSouls.SpiritMod.Enchants
             Item.width = 40;
             Item.height = 42;
             Item.rare = ModContent.GetInstance<InfernalVisor>().Item.rare;
-            Item.value = ModContent.GetInstance<InfernalVisor>().Item.value + ModContent.GetInstance<InfernalBreastplate>().Item.value + ModContent.GetInstance<InfernalGreaves>().Item.value + ModContent.GetInstance<EyeOfTheInferno>().Item.value + ModContent.GetInstance<InfernalStaff>().Item.value + ModContent.GetInstance<SevenSins>().Item.value;
+            Item.value = ModContent.GetInstance<InfernalVisor>().Item.value + ModContent.GetInstance<InfernalBreastplate>().Item.value + ModContent.GetInstance<InfernalGreaves>().Item.value + ModContent.GetInstance<EyeOfTheInferno>().Item.value + ModContent.GetInstance<EternalAsh>().Item.value + ModContent.GetInstance<BetrayersChains>().Item.value;
         }
         public override void UpdateAccessory(Player player, bool hideVisual)
         {

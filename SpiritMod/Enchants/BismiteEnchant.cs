@@ -20,7 +20,7 @@ namespace ResonantSouls.SpiritMod.Enchants
             Item.width = 36;
             Item.height = 40;
             Item.rare = ModContent.GetInstance<BismiteHelmet>().Item.rare;
-            Item.value = ModContent.GetInstance<BismiteHelmet>().Item.value + ModContent.GetInstance<BismiteChestplate>().Item.value + ModContent.GetInstance<BismiteLeggings>().Item.value + ModContent.GetInstance<BismiteShield>().Item.value + ModContent.GetInstance<BismiteChakra>().Item.value + ModContent.GetInstance<BismiteStaff>().Item.value;
+            Item.value = ModContent.GetInstance<BismiteHelmet>().Item.value + ModContent.GetInstance<BismiteChestplate>().Item.value + ModContent.GetInstance<BismiteLeggings>().Item.value + ModContent.GetInstance<BismitePotion>().Item.value * 3 + ModContent.GetInstance<BismiteChakra>().Item.value + ModContent.GetInstance<AccursedBlade>().Item.value;
         }
         public override void UpdateAccessory(Player player, bool hideVisual)
         {

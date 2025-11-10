@@ -19,7 +19,7 @@ namespace ResonantSouls.SpiritMod.Enchants
             Item.width = 36;
             Item.height = 40;
             Item.rare = ModContent.GetInstance<FrigidHelm>().Item.rare;
-            Item.value = ModContent.GetInstance<FrigidHelm>().Item.value + ModContent.GetInstance<FrigidChestplate>().Item.value + ModContent.GetInstance<FrigidLegs>().Item.value + ModContent.GetInstance<IcySpear>().Item.value + ModContent.GetInstance<FrostSpine>().Item.value + ModContent.GetInstance<IceBerries>().Item.value;
+            Item.value = ModContent.GetInstance<FrigidHelm>().Item.value + ModContent.GetInstance<FrigidChestplate>().Item.value + ModContent.GetInstance<FrigidLegs>().Item.value + ModContent.GetInstance<IcySpear>().Item.value + ModContent.GetInstance<FrostGiantBelt>().Item.value + ModContent.GetInstance<IceBerries>().Item.value;
         }
         public override void UpdateAccessory(Player player, bool hideVisual)
         {
