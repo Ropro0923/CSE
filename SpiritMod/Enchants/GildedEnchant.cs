@@ -3,6 +3,7 @@ using ResonantSouls.SpiritMod.Core;
 using SpiritMod.Items.Sets.MarbleSet.MarbleArmor;
 using SpiritMod.Items.Sets.MarbleSet;
 using SpiritMod.Items.Sets.ArcaneZoneSubclass;
+using ResonantSouls.SpiritMod.Items;
 
 namespace ResonantSouls.SpiritMod.Enchants
 {
@@ -17,7 +18,8 @@ namespace ResonantSouls.SpiritMod.Enchants
             base.SetDefaults();
             Item.width = 46;
             Item.height = 42;
-            Item.rare = ItemRarityID.Green;
+            Item.rare = ModContent.GetInstance<MarbleHelm>().Item.rare;
+            Item.value = ModContent.GetInstance<MarbleHelm>().Item.value + ModContent.GetInstance<MarbleChest>().Item.value + ModContent.GetInstance<MarbleStaff>().Item.value + ModContent.GetInstance<MarbleBident>().Item.value + ModContent.GetInstance<DefenseCodex>().Item.value;
         }
         public override void UpdateAccessory(Player player, bool hideVisual)
         {
@@ -42,5 +44,15 @@ namespace ResonantSouls.SpiritMod.Enchants
         public override bool IsLoadingEnabled(Mod mod) => ResonantSoulsSpiritConfig.Instance.Enchantments;
         public override Header ToggleHeader => Header.GetHeader<WorldsHeader>();
         public override int ToggleItemType => ModContent.ItemType<GildedEnchant>();
+        public override void OnHitNPCEither(Player player, NPC target, NPC.HitInfo hitInfo, DamageClass damageClass, int baseDamage, Projectile projectile, Item item)
+        {
+            if (Main.rand.NextBool(5))
+            {
+                int rune = Item.NewItem(player.GetSource_FromThis(), target.Hitbox, ModContent.ItemType<AncientRuneCollectible>());
+                
+                if (Main.netMode == NetmodeID.MultiplayerClient)
+                    NetMessage.SendData(MessageID.SyncItem, -1, -1, null, rune, 1f);
+            }
+        }
     }
 }

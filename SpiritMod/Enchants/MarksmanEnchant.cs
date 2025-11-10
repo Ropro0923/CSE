@@ -17,7 +17,8 @@ namespace ResonantSouls.SpiritMod.Enchants
             base.SetDefaults();
             Item.width = 44;
             Item.height = 32;
-            Item.rare = ItemRarityID.Blue;
+            Item.rare = ModContent.GetInstance<LeatherHood>().Item.rare;
+            Item.value = ModContent.GetInstance<LeatherHood>().Item.value + ModContent.GetInstance<LeatherPlate>().Item.value + ModContent.GetInstance<LeatherLegs>().Item.value + ModContent.GetInstance<DodgeBall>().Item.value + ModContent.GetInstance<LeatherShield>().Item.value + ModContent.GetInstance<LeatherBoots>().Item.value;
         }
         public override void UpdateAccessory(Player player, bool hideVisual)
         {

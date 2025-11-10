@@ -17,7 +17,8 @@ namespace ResonantSouls.SpiritMod.Enchants
             base.SetDefaults();
             Item.width = 36;
             Item.height = 40;
-            Item.rare = ItemRarityID.LightRed;
+            Item.rare = ModContent.GetInstance<SeraphHelm>().Item.rare;
+            Item.value = ModContent.GetInstance<SeraphHelm>().Item.value + ModContent.GetInstance<SeraphArmor>().Item.value + ModContent.GetInstance<SeraphLegs>().Item.value + ModContent.GetInstance<GloomgusStaff>().Item.value + ModContent.GetInstance<GlowSting>().Item.value + ModContent.GetInstance<WayfinderTorch>().Item.value;
         }
         public override void UpdateAccessory(Player player, bool hideVisual)
         {

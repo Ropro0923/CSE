@@ -11,6 +11,11 @@ namespace ResonantSouls.SpiritMod.Forces
     {
         public override bool IsLoadingEnabled(Mod mod) => ResonantSoulsSpiritConfig.Instance.Enchantments;
         public override string Texture => Debug.Placeholder;
+        public override void SetDefaults()
+        {
+            base.SetDefaults();
+            Item.value = ModContent.GetInstance<FrigidEnchant>().Item.value + ModContent.GetInstance<StreamSurferEnchant>().Item.value + ModContent.GetInstance<CryoliteEnchant>().Item.value + ModContent.GetInstance<CascadeEnchant>().Item.value;
+        }
         public override void SetStaticDefaults()
         {
             base.SetStaticDefaults();

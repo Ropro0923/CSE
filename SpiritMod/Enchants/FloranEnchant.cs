@@ -18,7 +18,8 @@ namespace ResonantSouls.SpiritMod.Enchants
             base.SetDefaults();
             Item.width = 36;
             Item.height = 40;
-            Item.rare = ItemRarityID.Green;
+            Item.rare = ModContent.GetInstance<FHelmet>().Item.rare;
+            Item.value = ModContent.GetInstance<FHelmet>().Item.value + ModContent.GetInstance<FPlate>().Item.value + ModContent.GetInstance<FLegs>().Item.value + ModContent.GetInstance<HuskstalkStaff>().Item.value + ModContent.GetInstance<FloranBludgeon>().Item.value + ModContent.GetInstance<FloranReacher>().Item.value;
         }
         public override void UpdateAccessory(Player player, bool hideVisual)
         {

@@ -16,7 +16,8 @@ namespace ResonantSouls.SpiritMod.Enchants
             base.SetDefaults();
             Item.width = 40;
             Item.height = 42;
-            Item.rare = ItemRarityID.Pink;
+            Item.rare = ModContent.GetInstance<InfernalVisor>().Item.rare;
+            Item.value = ModContent.GetInstance<InfernalVisor>().Item.value + ModContent.GetInstance<InfernalBreastplate>().Item.value + ModContent.GetInstance<InfernalGreaves>().Item.value + ModContent.GetInstance<EyeOfTheInferno>().Item.value + ModContent.GetInstance<InfernalStaff>().Item.value + ModContent.GetInstance<SevenSins>().Item.value;
         }
         public override void UpdateAccessory(Player player, bool hideVisual)
         {

@@ -30,6 +30,7 @@ namespace ResonantSouls.SpiritMod.Forces
             base.SetDefaults();
             Item.width = 44;
             Item.height = 24;
+            Item.value = ModContent.GetInstance<RogueEnchant>().Item.value + ModContent.GetInstance<MarksmanEnchant>().Item.value + ModContent.GetInstance<SunflowerEnchant>().Item.value + ModContent.GetInstance<WayfarerEnchant>().Item.value + ModContent.GetInstance<ElderbarkEnchant>().Item.value;
         }
         public override void UpdateAccessory(Player player, bool hideVisual)
         {

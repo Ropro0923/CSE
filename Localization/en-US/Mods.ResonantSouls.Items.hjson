@@ -267,7 +267,12 @@ SunflowerEnchant: {
 
 WayfarerEnchant: {
 	DisplayName: Wayfarer Enchant
-	Tooltip: ""
+	Tooltip:
+		'''
+		The longer you fire your weapon, the faster you move
+		At max charge, you have 30% faster movement speed and 70% faster acceleration
+		'They'll never see you coming'
+		'''
 }
 
 GildedEnchant: {
@@ -382,4 +387,30 @@ ResonantSoulsPainting: {
 		Special thanks all of our contributors and to the people who inspired us!
 		Hold SHIFT to view the full credits
 		'''
+}
+
+SigilOfResonanace: {
+	DisplayName: Sigil of Resonance
+	Tooltip:
+		'''
+		Summons the Resonant Champions
+		Summons vary depending on time and biome
+		Right click to check for possible summons
+		Not consumed on use
+		'''
+
+	Message: {
+		Etheriality: The briar shivers...
+		Nothing: Nothing seems to answer the call...
+	}
+}
+
+SigilOfResonance: {
+	DisplayName: Sigil Of Resonance
+	Tooltip: ""
+}
+
+AncientRuneCollectible: {
+	DisplayName: Rune Booster
+	Tooltip: ""
 }

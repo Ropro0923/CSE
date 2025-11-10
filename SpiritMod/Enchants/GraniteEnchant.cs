@@ -18,7 +18,8 @@ namespace ResonantSouls.SpiritMod.Enchants
             base.SetDefaults();
             Item.width = 36;
             Item.height = 40;
-            Item.rare = ItemRarityID.Green;
+            Item.rare = ModContent.GetInstance<GraniteHelm>().Item.rare;
+            Item.value = ModContent.GetInstance<GraniteHelm>().Item.value + ModContent.GetInstance<GraniteChest>().Item.value + ModContent.GetInstance<GraniteLegs>().Item.value + ModContent.GetInstance<RageBlazeDecapitator>().Item.value + ModContent.GetInstance<GraniteBow>().Item.value + ModContent.GetInstance<GraniteFlail>().Item.value;
         }
         public override void UpdateAccessory(Player player, bool hideVisual)
         {

@@ -18,7 +18,8 @@ namespace ResonantSouls.SpiritMod.Enchants
             base.SetDefaults();
             Item.width = 44;
             Item.height = 32;
-            Item.rare = ItemRarityID.White;
+            Item.rare = ModContent.GetInstance<ElderbarkHead>().Item.rare;
+            Item.value = ModContent.GetInstance<ElderbarkHead>().Item.value + ModContent.GetInstance<ElderbarkChest>().Item.value + ModContent.GetInstance<ElderbarkLegs>().Item.value + ModContent.GetInstance<HuskstalkSword>().Item.value + ModContent.GetInstance<HuskstalkStaff>().Item.value + ModContent.GetInstance<Durian>().Item.value;
         }
         public override void UpdateAccessory(Player player, bool hideVisual)
         {

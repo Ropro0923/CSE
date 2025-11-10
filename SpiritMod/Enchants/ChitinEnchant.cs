@@ -17,7 +17,8 @@ namespace ResonantSouls.SpiritMod.Enchants
             base.SetDefaults();
             Item.width = 40;
             Item.height = 44;
-            Item.rare = ItemRarityID.Blue;
+            Item.rare = ModContent.GetInstance<ChitinHelmet>().Item.rare;
+            Item.value = ModContent.GetInstance<ChitinHelmet>().Item.value + ModContent.GetInstance<ChitinChestplate>().Item.value + ModContent.GetInstance<ChitinLeggings>().Item.value + ModContent.GetInstance<RoyalKhopesh>().Item.value + ModContent.GetInstance<ScarabBow>().Item.value + ModContent.GetModItem(ModCompatibility.SpiritMod.Mod.Find<ModItem>("GildedScarab").Type).Item.value;
         }
         public override void UpdateAccessory(Player player, bool hideVisual)
         {

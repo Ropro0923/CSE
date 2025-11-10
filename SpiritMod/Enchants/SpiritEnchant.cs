@@ -16,7 +16,8 @@ namespace ResonantSouls.SpiritMod.Enchants
             base.SetDefaults();
             Item.width = 42;
             Item.height = 40;
-            Item.rare = ItemRarityID.Pink;
+            Item.rare = ModContent.GetInstance<SpiritHeadgear>().Item.rare;
+            Item.value = ModContent.GetInstance<SpiritHeadgear>().Item.value + ModContent.GetInstance<SpiritBodyArmor>().Item.value + ModContent.GetInstance<SpiritLeggings>().Item.value + ModContent.GetInstance<SpiritSpear>().Item.value + ModContent.GetInstance<Revenant>().Item.value + ModContent.GetInstance<SpiritWand>().Item.value;
         }
         public override void UpdateAccessory(Player player, bool hideVisual)
         {

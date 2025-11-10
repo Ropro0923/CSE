@@ -18,7 +18,8 @@ namespace ResonantSouls.SpiritMod.Enchants
             base.SetDefaults();
             Item.width = 36;
             Item.height = 40;
-            Item.rare = ItemRarityID.Blue;
+            Item.rare = ModContent.GetInstance<CascadeHelmet>().Item.rare;
+            Item.value = ModContent.GetInstance<CascadeHelmet>().Item.value + ModContent.GetInstance<CascadeChestplate>().Item.value + ModContent.GetInstance<CascadeLeggings>().Item.value + ModContent.GetInstance<Basking_Shark>().Item.value + ModContent.GetInstance<Reef_Wrath>().Item.value + ModContent.GetInstance<BubbleMine>().Item.value;
         }
         public override void UpdateAccessory(Player player, bool hideVisual)
         {

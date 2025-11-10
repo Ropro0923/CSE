@@ -18,7 +18,8 @@ namespace ResonantSouls.SpiritMod.Enchants
             base.SetDefaults();
             Item.width = 40;
             Item.height = 40;
-            Item.rare = ItemRarityID.White;
+            Item.rare = ModContent.GetInstance<DriftwoodHelmet>().Item.rare;
+            Item.value = ModContent.GetInstance<DriftwoodHelmet>().Item.value + ModContent.GetInstance<DriftwoodChestplate>().Item.value + ModContent.GetInstance<DriftwoodLeggings>().Item.value + ModContent.GetInstance<ButterflyStaff>().Item.value + ModContent.GetInstance<Coral_Catcher>().Item.value + ModContent.GetInstance<DriftwoodSword>().Item.value;
         }
         public override void UpdateAccessory(Player player, bool hideVisual)
         {

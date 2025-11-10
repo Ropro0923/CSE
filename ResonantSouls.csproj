@@ -5,8 +5,6 @@
 	<ItemGroup>
 		<InternalsVisibleTo Include="CSE" />
 		<InternalsVisibleTo Include="SecretsOfTheSouls" />
-		<InternalsVisibleTo Include="ssm" />
-		<InternalsVisibleTo Include="MonstrocityMod" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -24,11 +22,11 @@
 		</Reference>
 
 		<Reference Include="Luminance">
-	    	<HintPath>..\ModAssemblies\Luminance_v1.0.12.dll</HintPath>
+	    	<HintPath>..\ModAssemblies\Luminance_v1.0.13.dll</HintPath>
 		</Reference>
 
 		<Reference Include="SpiritMod">
-	    	<HintPath>..\ModAssemblies\SpiritMod_v1.5.0.38.dll</HintPath>
+	    	<HintPath>..\ModAssemblies\SpiritMod_v1.5.0.39.dll</HintPath>
 		</Reference>
 
 	</ItemGroup>

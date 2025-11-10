@@ -16,7 +16,8 @@ namespace ResonantSouls.SpiritMod.Enchants
             base.SetDefaults();
             Item.width = 40;
             Item.height = 46;
-            Item.rare = ItemRarityID.Cyan;
+            Item.rare = ModContent.GetInstance<PrimalstoneFaceplate>().Item.rare;
+            Item.value = ModContent.GetInstance<PrimalstoneFaceplate>().Item.value + ModContent.GetInstance<PrimalstoneBreastplate>().Item.value + ModContent.GetInstance<PrimalstoneLeggings>().Item.value + ModContent.GetInstance<Mountain>().Item.value + ModContent.GetInstance<Earthshatter>().Item.value + ModContent.GetInstance<QuakeFist>().Item.value;
         }
         public override void UpdateAccessory(Player player, bool hideVisual)
         {

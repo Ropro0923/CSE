@@ -18,7 +18,8 @@ namespace ResonantSouls.SpiritMod.Enchants
             base.SetDefaults();
             Item.width = 36;
             Item.height = 36;
-            Item.rare = ItemRarityID.White;
+            Item.rare = ModContent.GetInstance<BotanistHat>().Item.rare;
+            Item.value = ModContent.GetInstance<BotanistHat>().Item.value + ModContent.GetInstance<BotanistBody>().Item.value + ModContent.GetInstance<BotanistLegs>().Item.value + ModContent.GetInstance<WoodenClub>().Item.value + ModContent.GetInstance<UnfellerOfEvergreens>().Item.value + ModContent.GetInstance<ReachFishingCatch>().Item.value;
         }
         public override void UpdateAccessory(Player player, bool hideVisual)
         {

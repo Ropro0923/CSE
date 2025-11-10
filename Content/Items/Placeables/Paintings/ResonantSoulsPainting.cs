@@ -64,7 +64,7 @@ namespace ResonantSouls.Content.Items.Placeables.Paintings
         internal static IList<string> Devs =
         [
             "Ropro0923",
-            "Leo",
+            "LeEr206",
             "IceSpider",
             "Mr. Puzzles",
             "Akira",

@@ -5,8 +5,6 @@ using SpiritMod.Items.Armor;
 using SpiritMod.Items.Weapon.Thrown;
 using ResonantSouls.SpiritMod.Core;
 using FargowiltasSouls.Content.UI.Elements;
-using Luminance.Assets;
-using Microsoft.Xna.Framework.Graphics;
 using FargowiltasSouls;
 
 namespace ResonantSouls.SpiritMod.Enchants
@@ -22,7 +20,8 @@ namespace ResonantSouls.SpiritMod.Enchants
             base.SetDefaults();
             Item.width = 44;
             Item.height = 32;
-            Item.rare = ItemRarityID.Blue;
+            Item.rare = ModContent.GetInstance<RogueHood>().Item.rare;
+            Item.value = ModContent.GetInstance<RogueHood>().Item.value + ModContent.GetInstance<RoguePlate>().Item.value + ModContent.GetInstance<RoguePants>().Item.value + ModContent.GetInstance<RogueCrest>().Item.value + ModContent.GetInstance<LeatherGlove>().Item.value + ModContent.GetInstance<Kunai_Throwing>().Item.value * 250;
         }
         public override void UpdateAccessory(Player player, bool hideVisual)
         {
