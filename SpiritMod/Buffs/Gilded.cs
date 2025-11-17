@@ -1,6 +1,4 @@
-using FargowiltasSouls;
 using ResonantSouls.SpiritMod.Core;
-using ResonantSouls.SpiritMod.Enchants;
 
 namespace ResonantSouls.SpiritMod.Buffs
 {
@@ -16,10 +14,10 @@ namespace ResonantSouls.SpiritMod.Buffs
         }
         public override void Update(Player player, ref int buffIndex)
         {
-        //    player.moveSpeed += player.ForceEffect<GildedEffect>() ? 0.15f : 0.10f;
-        //    player.wingTimeMax += 250;
-        //    Main.NewText($"Max: {player.wingTimeMax}");
-        //    Main.NewText($"Current: {player.wingTime}");
+            //    player.moveSpeed += player.ForceEffect<GildedEffect>() ? 0.15f : 0.10f;
+            //    player.wingTimeMax += 250;
+            //    Main.NewText($"Max: {player.wingTimeMax}");
+            //    Main.NewText($"Current: {player.wingTime}");
         }
     }
 }

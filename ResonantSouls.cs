@@ -16,17 +16,17 @@ global using Fargowiltas.Content.Items.Tiles;
 
 namespace ResonantSouls
 {
-	public class ResonantSouls : Mod
-	{
-		internal static ResonantSouls Instance;
-		public override void Load()
-		{
-			Instance = this;
-			Fargowiltas.Fargowiltas.SoulsMods.Add(Instance.Name);
-		}
-		public override void Unload()
-		{
-			Instance = null;
-		}
-	}
+    public class ResonantSouls : Mod
+    {
+        internal static ResonantSouls Instance;
+        public override void Load()
+        {
+            Instance = this;
+            Fargowiltas.Fargowiltas.SoulsMods.Add(Instance.Name);
+        }
+        public override void Unload()
+        {
+            Instance = null;
+        }
+    }
 }

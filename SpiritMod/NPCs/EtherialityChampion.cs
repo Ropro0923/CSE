@@ -35,7 +35,6 @@ namespace ResonantSouls.SpiritMod.NPCs
         }
         public override void OnSpawn(IEntitySource source)
         {
-            Main.NewText("Gorp!");
             AttackQueue.Enqueue(0);
         }
         public override void AI()

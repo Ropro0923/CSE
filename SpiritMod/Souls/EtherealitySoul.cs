@@ -35,7 +35,7 @@ namespace ResonantSouls.SpiritMod.Souls
         {
             foreach (int force in Forces)
                 player.FargoSouls().ForceEffects.Add(force);
-                
+
             ModContent.GetInstance<AdventuresForce>().UpdateAccessory(player, hideVisual);
             ModContent.GetInstance<AtlantisForce>().UpdateAccessory(player, hideVisual);
             ModContent.GetInstance<FoesForce>().UpdateAccessory(player, hideVisual);

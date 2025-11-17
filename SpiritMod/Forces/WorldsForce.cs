@@ -11,11 +11,6 @@ namespace ResonantSouls.SpiritMod.Forces
     public class WorldsForce : BaseForce
     {
         public override bool IsLoadingEnabled(Mod mod) => ResonantSoulsSpiritConfig.Instance.Enchantments;
-        public override void SetDefaults()
-        {
-            base.SetDefaults();
-            Item.value = ModContent.GetInstance<AstraliteEnchant>().Item.value + ModContent.GetInstance<SpiritEnchant>().Item.value + ModContent.GetInstance<FloranEnchant>().Item.value + ModContent.GetInstance<GildedEnchant>().Item.value + ModContent.GetInstance<GraniteEnchant>().Item.value + ModContent.GetInstance<BismiteEnchant>().Item.value;
-        }
         public override void SetStaticDefaults()
         {
             base.SetStaticDefaults();
@@ -34,7 +29,7 @@ namespace ResonantSouls.SpiritMod.Forces
         public override void UpdateAccessory(Player player, bool hideVisual)
         {
             SetActive(player);
-            player.AddEffect<AstraliteEffect>(Item);
+            player.AddEffect<AstraliteDashEffect>(Item);
             player.AddEffect<SpiritEffect>(Item);
             player.AddEffect<FloranEffect>(Item);
             player.AddEffect<GildedEffect>(Item);

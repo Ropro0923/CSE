@@ -49,7 +49,7 @@ namespace ResonantSouls.SpiritMod.Enchants
             if (Main.rand.NextBool(5))
             {
                 int rune = Item.NewItem(player.GetSource_FromThis(), target.Hitbox, ModContent.ItemType<AncientRuneCollectible>());
-                
+
                 if (Main.netMode == NetmodeID.MultiplayerClient)
                     NetMessage.SendData(MessageID.SyncItem, -1, -1, null, rune, 1f);
             }

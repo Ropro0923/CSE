@@ -9,8 +9,9 @@ namespace ResonantSouls.SpiritMod.Core
 {
     [ExtendsFromMod(ModCompatibility.SpiritMod.Name)]
     [JITWhenModsEnabled(ModCompatibility.SpiritMod.Name)]
-    public class SpiritModConditions : ModSystem
+    public class ResonantSoulsSpiritModConditions : ModSystem
     {
+        public override bool IsLoadingEnabled(Mod mod) => ResonantSoulsSpiritConfig.Instance.QualityOfLife;
         internal static Condition DefeatedJellyDeluge = new("Defeated the Jelly Deluge", () => MyWorld.downedJellyDeluge);
         internal static Condition DefeatedMysticMoon = new("Defeated the Mystic Moon", () => MyWorld.downedBlueMoon);
         internal static Condition DefeatedTide = new("Defeated the Tide", () => MyWorld.downedTide);
@@ -59,25 +60,26 @@ namespace ResonantSouls.SpiritMod.Core
     }
     [ExtendsFromMod(ModCompatibility.SpiritMod.Name)]
     [JITWhenModsEnabled(ModCompatibility.SpiritMod.Name)]
-    public class SpiritModConditionsNPC : GlobalNPC
+    public class ResonantSoulsSpiritModConditionsNPC : GlobalNPC
     {
+        public override bool IsLoadingEnabled(Mod mod) => ResonantSoulsSpiritConfig.Instance.QualityOfLife;
         public override void OnKill(NPC npc)
         {
             if (npc.type == ModContent.NPCType<Vulture_Matriarch>())
             {
-                SpiritModConditions.defeatedVultureMatriarch = true;
+                ResonantSoulsSpiritModConditions.defeatedVultureMatriarch = true;
             }
             else if (npc.type == ModContent.NPCType<Valkyrie>())
             {
-                SpiritModConditions.defeatedValkyrie = true;
+                ResonantSoulsSpiritModConditions.defeatedValkyrie = true;
             }
             else if (npc.type == ModContent.NPCType<FallenAngel>())
             {
-                SpiritModConditions.defeatedFallenAngel = true;
+                ResonantSoulsSpiritModConditions.defeatedFallenAngel = true;
             }
             else if (npc.type == ModContent.NPCType<DarkfeatherMage>())
             {
-                SpiritModConditions.defeatedDarkfeatherMage = true;
+                ResonantSoulsSpiritModConditions.defeatedDarkfeatherMage = true;
             }
         }
     }

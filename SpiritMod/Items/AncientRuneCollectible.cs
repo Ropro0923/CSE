@@ -1,5 +1,6 @@
 using FargowiltasSouls;
 using ResonantSouls.SpiritMod.Buffs;
+using ResonantSouls.SpiritMod.Core;
 using ResonantSouls.SpiritMod.Enchants;
 using SpiritMod.Items.Sets.MarbleSet.MarbleArmor;
 using Terraria.Audio;
@@ -11,6 +12,7 @@ namespace ResonantSouls.SpiritMod.Items
     [JITWhenModsEnabled(ModCompatibility.SpiritMod.Name)]
     public class AncientRuneCollectible : ModItem
     {
+        public override bool IsLoadingEnabled(Mod mod) => ResonantSoulsSpiritConfig.Instance.Enchantments;
         public override string Texture => "SpiritMod/Items/Sets/RunicSet/Rune";
         public override void SetStaticDefaults()
         {

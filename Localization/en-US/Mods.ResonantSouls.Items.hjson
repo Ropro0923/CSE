@@ -96,7 +96,7 @@ EnergizerVinewraithBane: {
 }
 
 RogueEnchant: {
-	Tooltip: ""
+	Tooltip: Dashes and double jumps will throw a spread of three kunai towards your cursor
 	DisplayName: Rogue Enchant
 }
 
@@ -271,7 +271,7 @@ WayfarerEnchant: {
 		'''
 		The longer you fire your weapon, the faster you move
 		At max charge, you have 30% faster movement speed and 70% faster acceleration
-		'They'll never see you coming'
+		They'll never see you coming
 		'''
 }
 

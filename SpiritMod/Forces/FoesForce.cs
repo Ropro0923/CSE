@@ -32,7 +32,6 @@ namespace ResonantSouls.SpiritMod.Forces
             base.SetDefaults();
             Item.width = 84;
             Item.height = 780;
-            Item.value = ModContent.GetInstance<ChitinEnchant>().Item.value + ModContent.GetInstance<DuskEnchant>().Item.value + ModContent.GetInstance<PainMongerEnchant>().Item.value + ModContent.GetInstance<PrimalstoneEnchant>().Item.value + ModContent.GetInstance<ApostleEnchant>().Item.value;
         }
         public override void UpdateAccessory(Player player, bool hideVisual)
         {

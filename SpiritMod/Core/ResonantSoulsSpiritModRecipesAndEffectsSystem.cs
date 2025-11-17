@@ -6,24 +6,25 @@ namespace ResonantSouls.SpiritMod.Core
 {
     [ExtendsFromMod(ModCompatibility.SpiritMod.Name)]
     [JITWhenModsEnabled(ModCompatibility.SpiritMod.Name)]
-    public class SpiritModRecipesAndEffectsSystem : ModSystem
+    public class ResonantSoulsSpiritModRecipesAndEffectsSystem : ModSystem
     {
         public override bool IsLoadingEnabled(Mod mod) => ResonantSoulsSpiritConfig.Instance.Enchantments;
         public override void PostAddRecipes()
         {
-            foreach (var Recipe in Main.recipe)
+            for (int i = 0; i < Recipe.numRecipes; i++)
             {
-                if (Recipe.createItem.type == ModContent.ItemType<EternitySoul>())
+                Recipe recipe = Main.recipe[i];
+                if (recipe.createItem.type == ModContent.ItemType<EternitySoul>())
                 {
-                    Recipe.AddIngredient<EtherealitySoul>();
+                    recipe.AddIngredient<EtherealitySoul>();
                 }
-                else if (Recipe.createItem.type == ModContent.ItemType<WorldShaperSoul>())
+                else if (recipe.createItem.type == ModContent.ItemType<WorldShaperSoul>())
                 {
-                    Recipe.AddIngredient<BotanistEnchant>();
+                    recipe.AddIngredient<BotanistEnchant>();
                 }
-                else if (Recipe.createItem.type == ModContent.ItemType<TrawlerSoul>())
+                else if (recipe.createItem.type == ModContent.ItemType<TrawlerSoul>())
                 {
-                    Recipe.AddIngredient<DriftwoodEnchant>();
+                    recipe.AddIngredient<DriftwoodEnchant>();
                 }
             }
         }
